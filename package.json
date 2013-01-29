@@ -1,0 +1,18 @@
+{
+  "name": "mhg-simulation",
+  "title": "Morgans Hotel Group booking simulation",
+  "author": "Kyle Crouse <kyle.crouse@frogdesign.com> (http://www.frogdesign.com)",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "consolidate": "0.x",
+    "express": "3.x",
+    "hogan.js": "2.x",
+    "less-middleware": "0.x",
+    "underscore": "1.x"
+},
+  "main": "web/app",
+  "engines": {
+    "node": ">=0.6.3"
+  }
+}
