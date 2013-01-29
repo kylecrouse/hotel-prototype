@@ -98,4 +98,15 @@
   }
 }
 
+.clearfix {
+  &:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
 @import "reservations.less";

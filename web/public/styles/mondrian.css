@@ -18,14 +18,26 @@
 }
 @font-face {
   font-family: "helvetica-neue-condensed";
-  src: url("/fonts/HelveticaNeueLTCom-LtCn.ttf") format("truetype");
+  src: url("/fonts/HelveticaNeueLTCom-Cn.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "helvetica-neue-condensed";
-  src: url("/fonts/HelveticaNeueLTCom-LtCnO.ttf") format("truetype");
+  src: url("/fonts/HelveticaNeueLTCom-CnO.ttf") format("truetype");
   font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "helvetica-neue-condensed";
+  src: url("/fonts/HelveticaNeueLTCom-LtCn.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "helvetica-neue-condensed";
+  src: url("/fonts/HelveticaNeueLTCom-LtCnO.ttf") format("truetype");
+  font-weight: 300;
   font-style: italic;
 }
 @font-face {
@@ -404,6 +416,14 @@ table {
 .page-nav a em {
   color: #fff;
 }
+.clearfix:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 .breadcrumb {
   color: #999;
   font: 11px/1 "helvetica-neue", sans-serif;
@@ -421,7 +441,7 @@ table {
 }
 .page-header h1 {
   border-top: 1px solid #e7e8e9;
-  font: italic normal 40px/1 "helvetica-neue-condensed", sans-serif;
+  font: italic 300 40px/1 "helvetica-neue-condensed", sans-serif;
   padding-top: 10px;
   text-transform: uppercase;
 }
@@ -435,6 +455,7 @@ table {
 }
 .left-column {
   float: left;
+  margin-bottom: 55px;
   width: 732px;
 }
 .right-column {
@@ -443,4 +464,158 @@ table {
 }
 .room {
   background-color: #fff;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+.room h2 {
+  color: #26282c;
+  font: bold 14px/1 "helvetica-neue", sans-serif;
+}
+.room h3 {
+  color: #26282c;
+  font: bold 12px/18px "helvetica-neue", sans-serif;
+}
+.room .room-title {
+  float: left;
+}
+.room .room-booking {
+  float: right;
+}
+.room .room-booking .room-rate {
+  color: #26282c;
+  float: left;
+  font: bold 24px/1 "helvetica-neue", sans-serif;
+  margin-right: 20px;
+}
+.room .room-booking .room-rate small {
+  color: #888;
+  display: block;
+  font: italic normal 10px/16px "helvetica-neue", sans-serif;
+}
+.room .room-booking .button {
+  float: right;
+}
+.room .room-image {
+  display: block;
+  height: 230px;
+  left: 0;
+  position: absolute;
+  top: 20px;
+  width: 219px;
+}
+.room .room-details {
+  clear: both;
+  padding-top: 20px;
+  position: relative;
+}
+.room .room-details ul:not(.rates) {
+  float: left;
+  width: 225px;
+}
+.room .room-details ul:not(.rates) li:before {
+  content: '•';
+  margin-right: 5px;
+}
+.room .quick-details {
+  margin-left: 238px;
+  min-height: 230px;
+  position: relative;
+}
+.room .quick-details a {
+  bottom: 0;
+  color: #8453aa;
+  font: normal 12px/1 "helvetica-neue", sans-serif;
+  position: absolute;
+  text-decoration: none;
+}
+.room .expanded-details {
+  border-top: 1px solid #e8e9ec;
+  margin-top: 20px;
+  padding: 20px 0;
+}
+.room .expanded-details:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.room .rates li {
+  background: #f5f6f7;
+  border: 1px solid #eeeff0;
+  border-radius: 2px;
+  float: left;
+  font: normal 12px/16px "helvetica-neue", sans-serif;
+  height: 66px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+  padding-top: 12px;
+  text-align: center;
+  width: 92px;
+}
+.room .rates li:last-child {
+  margin-right: 0;
+}
+.room .rates li:first-child {
+  margin-left: 2px;
+}
+.room .rates li * {
+  display: block;
+}
+.room .rates li input {
+  margin: 0 auto 8px;
+}
+.room .rates li .date {
+  color: #8453aa;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.room .rates li .rate {
+  color: #26282c;
+  font-weight: bold;
+}
+.room .rates li.selected {
+  background: #e6e7eb;
+  border-color: #dbdcdf;
+}
+.room .rates li.selected .date {
+  font-weight: bold;
+}
+.room .column {
+  float: left;
+  margin-right: 20px;
+  width: 215px;
+}
+.room .column:last-child {
+  margin-right: 0;
+}
+.room .column h3 {
+  margin-bottom: 20px;
+}
+.room .column .floor-plan {
+  display: block;
+  margin: 20px auto 0;
+}
+.receipt {
+  background: transparent url(/images/receipt.png) no-repeat 0 0;
+  height: 610px;
+  text-indent: -9999px;
+  width: 100%;
+}
+.fine-print {
+  font: italic 10px/18px "helvetica-neue", sans-serif;
+  margin-top: 10px;
+}
+.button {
+  background: #8453aa;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font: italic normal 18px/1 "helvetica-neue-condensed", sans-serif;
+  padding: 10px 25px 6px 21px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
