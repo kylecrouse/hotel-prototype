@@ -3,6 +3,7 @@
 
 .inner {
   margin: 0 auto;
+  padding: 0 20px;
   width: 980px;
 }
 @import "header.less";
@@ -11,16 +12,22 @@
 #body {
   background: #f5f6f7;
   .inner {
-    margin: 0 auto;
-    min-height: 500px;
-    width: 980px;
+    padding-top: 40px;
   }
+}
+#body:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 @media (min-width: 1200px) {
   #body {
     margin: 0 auto;
-    padding: 0 110px;
-    width: 980px;
+    padding: 0 70px;
+    width: 1020px;
   }
 }
 
@@ -90,3 +97,16 @@
     }
   }
 }
+
+.clearfix {
+  &:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+@import "reservations.less";
