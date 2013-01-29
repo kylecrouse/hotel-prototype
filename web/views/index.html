@@ -3,6 +3,7 @@
   <head>
     <title>Mondrian Soho</title>
     <link href="{{base}}styles/mondrian.css" rel="stylesheet">
+    <link href="{{base}}styles/home.css" rel="stylesheet">
   </head>
   <body>
 
@@ -29,13 +30,27 @@
 
     <div id="body">
       <div class="inner">
-
+        <div id="wrapper">
+          <div id="scroller">
+            <section>
+              <div class="pixel" data-stellar-ratio="1.1"></div>
+              <div class="pixel" data-stellar-ratio="1.2"></div>
+              <div class="pixel" data-stellar-ratio="1.3"></div>
+              <div class="pixel" data-stellar-ratio="1.4"></div>
+              <div class="pixel" data-stellar-ratio="1.5"></div>
+              <div class="pixel" data-stellar-ratio="1.6"></div>
+              <div class="pixel" data-stellar-ratio="1.7"></div>
+              <div class="pixel" data-stellar-ratio="1.8"></div>
+              <div class="pixel" data-stellar-ratio="1.9"></div>
+              <div class="pixel" data-stellar-ratio="2.0"></div>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
 
     <div id="footer">
       <div class="inner">
-
         <div class="property">
           <h2>Mondrian Soho <small>+1 (212) 555-1212</small></h2>
           <nav>
@@ -79,90 +94,40 @@
       </div>
     </div>
 
+    <script src="{{base}}js/jquery.min.js"></script>
+    <script src="{{base}}js/stellar.js"></script>
+    <script src="{{base}}js/iscroll.js"></script>
+    <script>
+      (function(){
+        var ua = navigator.userAgent,
+          isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+
+        if (isMobileWebkit) {
+          $('html').addClass('mobile');
+        }
+
+        $(function(){
+          var iScrollInstance;
+
+          if (isMobileWebkit) {
+            iScrollInstance = new iScroll('wrapper');
+
+            $('#scroller').stellar({
+              scrollProperty: 'transform',
+              positionProperty: 'transform',
+              horizontalScrolling: false,
+              verticalOffset: 150
+            });
+          } else {
+            $.stellar({
+              horizontalScrolling: false,
+              verticalOffset: 150
+            });
+          }
+        });
+
+      })();
+
+    </script>
   </body>
 </html>
-
-<!-- 
-<!doctype html>
-<html>
-  <head>
-  	<title>Mondrian Soho: Deluxe One-Bedroom Suite</title>
-    <link href="{{base}}styles/mondrian.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width">
-  </head>
-  <body>
-
-    <div id="header" class="fixed-top">
-      <div class="inner">
-        <h1>Mondrian <span>Soho</span></h1>
-        <nav class="primary-nav">
-          <ul>
-            <li><a href="#"><em>Rooms</em></a></li>
-            <li><a href="#">Amenities</a></li>
-            <li><a href="#">Dining</a></li>
-            <li><a href="#">Bang</a></li>
-          </ul>
-        </nav>
-        <div class="booker">
-          <a href="#">Book Now</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="body">
-      <div class="inner">
-
-      <div class="content">
-
-        <div class="gallery" data-width="1200">
-          <div class="slide">
-            <img src="/images/slide1.png" height="700" width="1200"/>
-            <h2 class="caption"><small>Mondrian Soho</small> Deluxe One-Bedroom Suite</h2>
-          </div>
-        </div>
-        <nav class="page-nav">
-          <ul>
-            <li><a href="#"><em>Gallery</em></a></li>
-            <li><a href="#">Description</a></li>
-            <li><a href="#">Amenities</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Offers</a></li>
-            <li><a href="#">Book Now</a></li>
-          </ul>
-        </nav>
-        <div class="copy">
-          <h3>Book Now</h3>
-        </div>
-        <div class="gallery" data-width="1400">
-          <div class="slide">
-            <img src="/images/image1.png" height="800" width="1400"/>
-            <h3 class="caption"><small>New York Energy</small> Feel the City</h3>
-          </div>
-        </div>
-        <div class="copy">
-          <h3>Live the Fantasy</h3>
-          <p>Inspired by Jean Cocteau’s 1946 film “La Belle et la Bete”, Mondrian SoHo evokes a provocative fantasy that translates to every detail of the guest rooms. Created by Benjamin Noriega-Ortiz, the seductive experience begins from the Crosby Street entrance of the hotel and continues throughout the hotel. The corridors leading to the “Sleeping Chambers” feature a grand carpet with a custom, rose vine design, large antique mirrors and crystal sconces. Upon opening the door to the guest room, you will find yourself in an elegant foyer-entrance with rich marble floors, leading to the bright, loft-like space. These “Sleeping Chambers” are appointed with a custom built-in chrome desk, facing the city skyline. The vanity doubles as a wet bar and the bathing chamber is sequestered behind jewel-toned doors. White beds are flanked by chrome night tables and floor to ceiling, glass windows reveal spectacular views of downtown. <em>All guest rooms at Mondrian are non-smoking rooms.</em></p>
-        </div>
-
-      </div>
-
-      <div class="footer">
-        <h2>Morgans Hotel Group</h2>
-        <p>At Morgans Hotel Group, we are the global leader and innovator of the lifestyle hospitality sector, dedicated to building a differentiated brand portfolio and establishing our properties in 24 hour urban and select resort markets. We create a vibe that encourages our guests, who we call the Creative Class, to live every moment more intensely.</p>
-        <nav class="footer-nav">
-          <ul>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Policies</a></li>
-          </ul>
-          <p class="copyright">&copy; 2001 &ndash; 2013 Morgans Hotel Group LLC</p>
-        </nav>
-      </div>
-
-      </div>
-    </div>
-
-  </body>
-</html> -->
