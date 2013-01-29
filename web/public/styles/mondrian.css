@@ -18,14 +18,26 @@
 }
 @font-face {
   font-family: "helvetica-neue-condensed";
-  src: url("/fonts/HelveticaNeueLTCom-ThCn.ttf") format("truetype");
+  src: url("/fonts/HelveticaNeueLTCom-LtCn.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "helvetica-neue-condensed";
-  src: url("/fonts/HelveticaNeueLTCom-ThCnO.ttf") format("truetype");
+  src: url("/fonts/HelveticaNeueLTCom-LtCnO.ttf") format("truetype");
   font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "helvetica-neue-condensed";
+  src: url("/fonts/HelveticaNeueLTCom-ThCn.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "helvetica-neue-condensed";
+  src: url("/fonts/HelveticaNeueLTCom-ThCnO.ttf") format("truetype");
+  font-weight: 100;
   font-style: italic;
 }
 html,
@@ -156,6 +168,7 @@ table {
 }
 .inner {
   margin: 0 auto;
+  padding: 0 20px;
   width: 980px;
 }
 #header {
@@ -174,9 +187,7 @@ table {
   z-index: 2;
 }
 #header .inner {
-  margin: 0 auto;
   position: relative;
-  width: 980px;
 }
 #header li {
   display: inline-block;
@@ -206,7 +217,7 @@ table {
 .utility-nav {
   font-size: 10px;
   position: absolute;
-  right: 0;
+  right: 20px;
   top: -60px;
 }
 .utility-nav li {
@@ -312,15 +323,21 @@ table {
   background: #f5f6f7;
 }
 #body .inner {
-  margin: 0 auto;
-  min-height: 500px;
-  width: 980px;
+  padding-top: 40px;
+}
+#body:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 @media (min-width: 1200px) {
   #body {
     margin: 0 auto;
-    padding: 0 110px;
-    width: 980px;
+    padding: 0 70px;
+    width: 1020px;
   }
 }
 .gallery {
@@ -386,4 +403,44 @@ table {
 }
 .page-nav a em {
   color: #fff;
+}
+.breadcrumb {
+  color: #999;
+  font: 11px/1 "helvetica-neue", sans-serif;
+  margin-bottom: 40px;
+}
+.breadcrumb strong {
+  color: #26282c;
+  font-weight: bold;
+}
+.page-header {
+  border-top: 1px solid #26282c;
+  color: #26282c;
+  margin-bottom: 50px;
+  position: relative;
+}
+.page-header h1 {
+  border-top: 1px solid #e7e8e9;
+  font: italic normal 40px/1 "helvetica-neue-condensed", sans-serif;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.page-header .progress {
+  background: transparent url(/images/progress.png) no-repeat 0 0;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 7px;
+  width: 238px;
+}
+.left-column {
+  float: left;
+  width: 732px;
+}
+.right-column {
+  float: right;
+  width: 236px;
+}
+.room {
+  background-color: #fff;
 }
