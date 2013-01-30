@@ -1,9 +1,6 @@
 #footer {
   margin-top: 0px;
 }
-#body .inner {
-  position: relative;
-}
 #body .inner section {
   position: relative;
   top: 0px;
@@ -22,5 +19,5 @@
   width: 100%;
 }
 .mobile body #scroller {
-  height: 8000px;
+  height: 6000px;
 }
