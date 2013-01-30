@@ -479,7 +479,7 @@ table {
 }
 .room {
   background-color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   padding: 20px;
 }
 .room h2 {
@@ -548,19 +548,55 @@ table {
 }
 .room .amenities {
   margin-bottom: -20px;
-  padding-top: 50px;
+  padding-top: 0;
+}
+.room .amenities:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
 }
 .room .amenities .image {
   height: 120px;
+  top: 10px;
+}
+.room .amenities .amenities-title + .image {
+  top: 40px;
+}
+.room .amenities .image + .amenities-list {
+  padding-top: 0;
+}
+.room .amenities .amenities-title + .image + .amenities-list {
+  padding-top: 40px;
+}
+.room .room-summary + .amenities {
+  padding-top: 50px;
+}
+.room .room-summary + .amenities .image {
   top: 90px;
+}
+.room .amenities + .amenities {
+  border-top: 1px solid #e8e9ec;
+  margin-top: 10px;
+  padding-top: 10px;
 }
 .room .amenities-list {
   margin-left: 238px;
   min-height: 120px;
-  padding-top: 40px;
 }
 .room .amenities-list h3 {
   margin-bottom: 20px;
+}
+.room .add-package {
+  float: right;
+}
+.room .add-package .package-rate {
+  color: #26282c;
+  display: inline;
+  font: normal bold 18px/1 "helvetica-neue", sans-serif;
+  margin-right: 10px;
 }
 .room .quick-details {
   margin-left: 238px;
@@ -873,6 +909,11 @@ table {
 }
 .button.disabled {
   background: #c8ccd0;
+}
+.button.inverse {
+  background: #f5f6f7;
+  border: 1px solid #eeeff0;
+  color: #8453aa;
 }
 .control {
   background: #f5f6f7;
