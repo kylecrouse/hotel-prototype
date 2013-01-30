@@ -935,6 +935,67 @@ table {
     padding-right: 90px;
   }
 }
+.block {
+  background-color: #fff;
+  font: normal normal 12px/16px "helvetica-neue", sans-serif;
+}
+.block + .block {
+  margin-top: 15px;
+}
+.block.em {
+  background-color: #e6e7ed;
+}
+.block a {
+  color: #8453aa;
+  text-decoration: none;
+}
+.block-header {
+  padding: 20px;
+}
+.block-header .title {
+  color: #26282c;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  margin-top: 4px;
+}
+.block-body {
+  padding: 20px;
+}
+.block-header + .block-body {
+  padding-top: 10px;
+}
+.form {
+  margin-bottom: -10px;
+}
+.form:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.form .field {
+  float: left;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  width: 50%;
+  -webkit-box-sizing: border-box;
+}
+.form .field:nth-child(2n+1) {
+  padding-left: 0;
+}
+.form label {
+  color: #26282c;
+  display: block;
+  font: normal bold 10px/1 "helvetica-neue", sans-serif;
+  margin-bottom: 5px;
+}
+.form .control {
+  height: 30px;
+  width: 100%;
+}
 .button {
   background: #8453aa;
   border-radius: 2px;
