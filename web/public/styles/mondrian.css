@@ -490,8 +490,10 @@ table {
   color: #26282c;
   font: bold 12px/18px "helvetica-neue", sans-serif;
 }
-.room .room-title {
+.room .room-title,
+.room .amenities-title {
   float: left;
+  margin-bottom: 10px;
 }
 .room .room-booking {
   float: right;
@@ -510,7 +512,8 @@ table {
 .room .room-booking .button {
   float: right;
 }
-.room .room-image {
+.room .room-image,
+.room .amenities .image {
   display: block;
   height: 230px;
   left: 0;
@@ -518,18 +521,46 @@ table {
   top: 20px;
   width: 219px;
 }
-.room .room-details {
+.room .room-details,
+.room .room-summary,
+.room .amenities {
   clear: both;
   padding-top: 20px;
   position: relative;
 }
-.room .room-details ul:not(.rates) {
+.room .room-details ul:not(.rates),
+.room .room-summary ul:not(.rates),
+.room .amenities ul:not(.rates) {
   float: left;
   width: 225px;
 }
-.room .room-details ul:not(.rates) li:before {
+.room .room-details ul:not(.rates) li:before,
+.room .room-summary ul:not(.rates) li:before,
+.room .amenities ul:not(.rates) li:before {
   content: '•';
   margin-right: 5px;
+}
+.room .room-summary {
+  min-height: 230px;
+}
+.room .room-summary h3 {
+  margin-bottom: 20px;
+}
+.room .amenities {
+  margin-bottom: -20px;
+  padding-top: 50px;
+}
+.room .amenities .image {
+  height: 120px;
+  top: 90px;
+}
+.room .amenities-list {
+  margin-left: 238px;
+  min-height: 120px;
+  padding-top: 40px;
+}
+.room .amenities-list h3 {
+  margin-bottom: 20px;
 }
 .room .quick-details {
   margin-left: 238px;
@@ -556,6 +587,35 @@ table {
 }
 .room .quick-details .open .arrow {
   -webkit-transform: translate(0, -3px);
+}
+.room .room-summary .highlights {
+  font: normal 12px/1 "helvetica-neue", sans-serif;
+  margin-left: 238px;
+}
+.room .room-summary .highlights h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.room .room-summary .highlights strong {
+  color: #26282c;
+  font-weight: bold;
+  padding-right: 10px;
+}
+.room .room-summary .highlights a {
+  color: #8453aa;
+  text-decoration: none;
+}
+.room .room-summary .quick-details {
+  bottom: 0;
+  min-height: 0;
+  position: absolute;
+}
+.room .room-summary .quick-details a {
+  clear: both;
+  display: block;
+  padding-top: 15px;
+  position: static;
 }
 .room .expanded-details {
   border-top: 1px solid #e8e9ec;
@@ -659,14 +719,29 @@ table {
 .receipt .details {
   background: #fff;
   border: 1px solid #e6e6e6;
+  color: #26282c;
   padding: 15px 14px;
 }
 .receipt .details h3 {
-  color: #26282c;
   font-size: 12px;
   font-weight: bold;
   line-height: 18px;
   margin-bottom: 10px;
+}
+.receipt .details dl:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.receipt .details dt {
+  clear: right;
+  float: left;
+}
+.receipt .details dd {
+  float: right;
 }
 .receipt .details .reservation:after,
 .receipt .details .fare:after,
@@ -691,20 +766,11 @@ table {
 .receipt .details .fare {
   border-bottom: 1px solid #e8e9ec;
   border-top: 1px solid #e8e9ec;
-  color: #26282c;
   margin: 5px 0;
   padding: 15px 0;
 }
-.receipt .details .fare dt {
-  clear: right;
-  float: left;
-}
-.receipt .details .fare dd {
-  float: right;
-}
 .receipt .details .code {
   border-bottom: 1px solid #e8e9ec;
-  color: #8453aa;
   line-height: 36px;
   margin-bottom: 5px;
   padding-bottom: 3px;
@@ -716,17 +782,17 @@ table {
   text-align: left;
   width: 40%;
 }
+.receipt .details .code strong {
+  color: #8453aa;
+}
 .receipt .details .total {
-  color: #26282c;
   margin-bottom: 50px;
   padding-top: 10px;
 }
 .receipt .details .total dt {
   font-weight: bold;
-  float: left;
 }
 .receipt .details .total dd {
-  float: right;
   font-size: 24px;
   font-weight: bold;
 }
