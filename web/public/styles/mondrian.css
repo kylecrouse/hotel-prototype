@@ -741,6 +741,56 @@ table {
   font: italic 10px/18px "helvetica-neue", sans-serif;
   margin-top: 10px;
 }
+.other-options {
+  background: #e6e7ed;
+  clear: both;
+  padding: 50px 0 150px;
+}
+.other-options h2 {
+  color: #26282c;
+  font: italic 300 24px/1 "helvetica-neue-condensed", sans-serif;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+.other-options h3 {
+  color: #26282c;
+  font: italic normal 14px/1 "Georgia", serif;
+  margin: 10px 0;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.other-options img {
+  display: block;
+}
+.other-options p + p {
+  margin-top: 10px;
+}
+.other-options a {
+  color: #8453aa;
+  font: italic normal 14px/1 "Georgia", serif;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.other-options .property {
+  float: left;
+  margin-right: 15px;
+  width: 236px;
+}
+.other-options:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+@media (min-width: 1200px) {
+  .other-options {
+    margin: 0 -90px;
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+}
 .button {
   background: #8453aa;
   border-radius: 2px;
@@ -779,6 +829,9 @@ table {
   background-repeat: no-repeat;
 }
 .control.toggle {
+  background-image: url(/images/icon.toggle.png);
+  background-position: 50%;
+  background-repeat: no-repeat;
   text-align: center;
 }
 .arrow {
