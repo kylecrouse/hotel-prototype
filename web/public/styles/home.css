@@ -1,12 +1,55 @@
 #footer {
   margin-top: 0px;
 }
+.navbar {
+  position: relative;
+}
+#body {
+  padding: 0;
+}
+#body .inner {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 #body .inner section {
   position: relative;
   top: 0px;
   width: 100%;
-  height: 4000px;
+  height: 3453px;
   margin: 0;
+}
+#body .inner section .page {
+  width: 100%;
+  overflow: hidden;
+}
+* {
+  -webkit-overflow-scrolling: touch;
+}
+#page01 {
+  background: url(../images/homepage01_bg.jpg) no-repeat;
+  height: 560px;
+}
+#page02 {
+  background: url(../images/homepage02_bg.jpg) no-repeat;
+  height: 780px;
+}
+#page03 {
+  background: url(../images/homepage03_bg.jpg) no-repeat;
+  height: 382px;
+}
+#page04 {
+  background: url(../images/homepage04_bg.jpg) no-repeat;
+  height: 382px;
+}
+#page05 {
+  background: url(../images/homepage05_bg.jpg) no-repeat;
+  height: 382px;
+}
+#page06 {
+  background: url(../images/homepage06_bg.jpg) no-repeat;
+  height: 968px;
 }
 .mobile body {
   overflow: hidden;
@@ -19,5 +62,5 @@
   width: 100%;
 }
 .mobile body #scroller {
-  height: 6000px;
+  height: 4600px;
 }
