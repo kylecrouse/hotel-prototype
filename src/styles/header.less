@@ -1,17 +1,9 @@
 #header {
-  background: rgba(255,255,255,0.97);
+  background: #fff;
   color: #26282c;
   font: 12px/20px "helvetica-neue", sans-serif;
-  height: 40px;
-  padding-top: 80px;
+  height: 120px;
   text-transform: uppercase;
-  &.fixed-top {
-    left: 0;
-    position: fixed;
-    top: 20px;
-    width: 100%;
-    z-index: 2;    
-  }
   .inner {
     position: relative;
   }
@@ -27,10 +19,23 @@
     }
   }
 }
+.navbar {
+  background: rgba(255,255,255,0.95);
+  left: 0;
+  height: 60px;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  z-index: 2;    
+  .inner {
+    padding-top: 22px;
+  }
+}
 .brand {
   float: left;
   font-weight: normal;
   font-size: 20px;
+  line-height: 1;
   margin: 0;
   span {
     background: transparent url(/images/world.png) no-repeat 100% -1px;
@@ -38,14 +43,13 @@
     padding-right: 35px;
   }
 }
-.primary-nav {
+.nav {
   float: right;
  }
-.utility-nav {
+.utility-navbar {
   font-size: 10px;
-  position: absolute;
-  right: 20px;
-  top: -60px;
+  padding-top: 25px;
+  text-align: right;
   li {
     margin-left: 20px !important;
     &:not(:first-child) a {

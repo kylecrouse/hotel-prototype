@@ -184,19 +184,11 @@ table {
   width: 980px;
 }
 #header {
-  background: rgba(255, 255, 255, 0.97);
+  background: #fff;
   color: #26282c;
   font: 12px/20px "helvetica-neue", sans-serif;
-  height: 40px;
-  padding-top: 80px;
+  height: 120px;
   text-transform: uppercase;
-}
-#header.fixed-top {
-  left: 0;
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  z-index: 2;
 }
 #header .inner {
   position: relative;
@@ -212,10 +204,23 @@ table {
 #header a em {
   color: #26282c;
 }
+.navbar {
+  background: rgba(255, 255, 255, 0.95);
+  left: 0;
+  height: 60px;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  z-index: 2;
+}
+.navbar .inner {
+  padding-top: 22px;
+}
 .brand {
   float: left;
   font-weight: normal;
   font-size: 20px;
+  line-height: 1;
   margin: 0;
 }
 .brand span {
@@ -223,30 +228,29 @@ table {
   font-weight: 100;
   padding-right: 35px;
 }
-.primary-nav {
+.nav {
   float: right;
 }
-.utility-nav {
+.utility-navbar {
   font-size: 10px;
-  position: absolute;
-  right: 20px;
-  top: -60px;
+  padding-top: 25px;
+  text-align: right;
 }
-.utility-nav li {
+.utility-navbar li {
   margin-left: 20px !important;
 }
-.utility-nav li:not(:first-child) a {
+.utility-navbar li:not(:first-child) a {
   background: transparent url(/images/icon.arrow.down.png) no-repeat 100% -1px;
   padding-right: 10px;
 }
-.utility-nav strong {
+.utility-navbar strong {
   color: #26282c;
   font-weight: bold;
 }
 #footer {
   background: #26282c;
   margin-top: 64px;
-  padding: 90px 0 120px;
+  padding: 90px 0 60px;
 }
 #footer .corporate:after,
 #footer .property:after {
@@ -272,7 +276,8 @@ table {
   margin-top: 28px;
   padding-top: 40px;
 }
-.corporate h2 {
+.corporate h2,
+.locations h2 {
   margin-bottom: 30px;
 }
 .corporate .boilerplate p {
@@ -330,6 +335,12 @@ table {
   float: left;
   margin-left: 12px;
   width: 236px;
+}
+.locations {
+  background: transparent url(/images/locations-map.png) no-repeat 0 100%;
+  clear: both;
+  margin-top: 50px;
+  padding-bottom: 508px;
 }
 #body {
   background: #f5f6f7;
@@ -433,6 +444,10 @@ table {
   color: #26282c;
   font-weight: bold;
 }
+.breadcrumb .arrow {
+  background: transparent;
+  display: inline;
+}
 .page-header {
   border-top: 1px solid #26282c;
   color: #26282c;
@@ -528,6 +543,20 @@ table {
   position: absolute;
   text-decoration: none;
 }
+.room .quick-details .arrow {
+  background: transparent url(/images/icon.arrow.purple.png) no-repeat 0 0;
+  display: inline-block;
+  height: 9px;
+  padding-right: 3px;
+  overflow: hidden;
+  text-indent: -9999px;
+  vertical-align: text-bottom;
+  width: 8px;
+  -webkit-transform: rotate(-90deg) translate(4px, 0);
+}
+.room .quick-details .open .arrow {
+  -webkit-transform: translate(0, -3px);
+}
 .room .expanded-details {
   border-top: 1px solid #e8e9ec;
   margin-top: 20px;
@@ -600,10 +629,113 @@ table {
   margin: 20px auto 0;
 }
 .receipt {
-  background: transparent url(/images/receipt.png) no-repeat 0 0;
-  height: 610px;
-  text-indent: -9999px;
-  width: 100%;
+  font: normal normal 12px/16px "helvetica-neue", sans-serif;
+}
+.receipt .status {
+  background: #26282c;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 20px 15px 15px;
+}
+.receipt .property {
+  background: transparent url(/images/icon.arrow.purple.png) no-repeat 100% 25%;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.receipt .subtotal {
+  line-height: 26px;
+}
+.receipt .subtotal .estimate {
+  font-size: 24px;
+}
+.receipt .subtotal .currency {
+  font-size: 16px;
+}
+.receipt .details {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 15px 14px;
+}
+.receipt .details h3 {
+  color: #26282c;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.receipt .details .reservation:after,
+.receipt .details .fare:after,
+.receipt .details .code:after,
+.receipt .details .total:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.receipt .details .reservation .control {
+  margin-left: 6px;
+  margin-bottom: 10px;
+  width: 49%;
+  -webkit-box-sizing: border-box;
+}
+.receipt .details .reservation .control:nth-child(even) {
+  margin-left: 0;
+}
+.receipt .details .fare {
+  border-bottom: 1px solid #e8e9ec;
+  border-top: 1px solid #e8e9ec;
+  color: #26282c;
+  margin: 5px 0;
+  padding: 15px 0;
+}
+.receipt .details .fare dt {
+  clear: right;
+  float: left;
+}
+.receipt .details .fare dd {
+  float: right;
+}
+.receipt .details .code {
+  border-bottom: 1px solid #e8e9ec;
+  color: #8453aa;
+  line-height: 36px;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  text-align: right;
+}
+.receipt .details .code .control {
+  color: #a0a2a6;
+  font-weight: normal;
+  text-align: left;
+  width: 40%;
+}
+.receipt .details .total {
+  color: #26282c;
+  margin-bottom: 50px;
+  padding-top: 10px;
+}
+.receipt .details .total dt {
+  font-weight: bold;
+  float: left;
+}
+.receipt .details .total dd {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+.receipt .details .total dd small {
+  font-size: 12px;
+  font-weight: normal;
+}
+.receipt .details .total dd .arrow {
+  margin-left: 5px;
 }
 .fine-print {
   font: italic 10px/18px "helvetica-neue", sans-serif;
@@ -618,4 +750,40 @@ table {
   padding: 10px 25px 6px 21px;
   text-decoration: none;
   text-transform: uppercase;
+}
+.button.block {
+  display: block;
+  text-align: center;
+}
+.button.disabled {
+  background: #c8ccd0;
+}
+.control {
+  background: #f5f6f7;
+  border: 1px solid #eeeff0;
+  border-radius: 2px;
+  color: #26282c;
+  float: left;
+  font: bold normal 11px/1 "helvetica-neue", sans-serif;
+  padding: 12px 8px 9px;
+  text-transform: uppercase;
+}
+.control.calendar {
+  background-image: url(/images/icon.calendar.png);
+  background-position: 94% 49%;
+  background-repeat: no-repeat;
+}
+.control.dropdown {
+  background-image: url(/images/icon.arrow.purple.png);
+  background-position: 90% 49%;
+  background-repeat: no-repeat;
+}
+.control.toggle {
+  text-align: center;
+}
+.arrow {
+  background: transparent url(/images/icon.arrow.purple.png) no-repeat 0 0;
+  display: inline-block;
+  height: 9px;
+  width: 8px;
 }
