@@ -24,12 +24,15 @@
     text-transform: uppercase;
   }
   .progress {
-    background: transparent url(/images/progress.png) no-repeat 0 0;
+    background: transparent url(/images/progress.select.png) no-repeat 0 0;
     height: 40px;
     position: absolute;
     right: 0;
     top: 7px;
     width: 238px;
+    &.customize {
+      background-image: url(/images/progress.customize.png);
+    }
   }
 }
 

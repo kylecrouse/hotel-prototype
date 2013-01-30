@@ -461,12 +461,15 @@ table {
   text-transform: uppercase;
 }
 .page-header .progress {
-  background: transparent url(/images/progress.png) no-repeat 0 0;
+  background: transparent url(/images/progress.select.png) no-repeat 0 0;
   height: 40px;
   position: absolute;
   right: 0;
   top: 7px;
   width: 238px;
+}
+.page-header .progress.customize {
+  background-image: url(/images/progress.customize.png);
 }
 .left-column {
   float: left;
