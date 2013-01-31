@@ -1327,7 +1327,7 @@ table {
 }
 .body-navbar.stuck {
   position: fixed;
-  top: 90px;
+  top: 60px;
   width: 1200px;
   z-index: 2;
 }
@@ -1363,7 +1363,6 @@ table {
 .body-navbar.booking.stuck {
   margin: 0 -110px;
   padding: 0 110px;
-  top: 60px;
   width: 980px;
 }
 .body-navbar.booking .nav {
