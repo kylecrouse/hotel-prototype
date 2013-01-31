@@ -16,5 +16,14 @@ $(document).ready(
           return -($('.left-column').outerHeight()-90-$(this).height());
         }
       });
+
+    $('[data-toggle="collapse"]').click(
+      function(event) {
+        event.preventDefault();
+        var $target = $($(this).attr('href'));
+        $(this).toggleClass('open');
+        $target.toggleClass('in');
+      }
+    );
   }
 );

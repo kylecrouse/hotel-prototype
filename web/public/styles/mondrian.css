@@ -1280,3 +1280,9 @@ table {
   width: 10px;
   vertical-align: middle;
 }
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
