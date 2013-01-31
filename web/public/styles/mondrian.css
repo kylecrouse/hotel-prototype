@@ -1216,6 +1216,11 @@ table {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-transition: background-color 0.2s ease;
+}
+.button:hover {
+  background: #482167;
+  -webkit-transition: background-color 0.2s ease;
 }
 .button.block {
   display: block;
@@ -1227,6 +1232,9 @@ table {
   background: #f5f6f7;
   border: 1px solid #eeeff0;
   color: #8453aa;
+}
+.button.inverse:hover {
+  background: #e6e7e8;
 }
 .button.light {
   background: #fff;
@@ -1363,7 +1371,7 @@ table {
 .body-navbar.booking.stuck {
   margin: 0 -110px;
   padding: 0 110px;
-  width: 980px;
+  width: 632px;
 }
 .body-navbar.booking .nav {
   font: italic 100 20px/1 helvetica-neue-condensed, sans-serif;

@@ -719,6 +719,11 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  -webkit-transition: background-color 0.2s ease;
+  &:hover {
+    background: #482167;
+    -webkit-transition: background-color 0.2s ease;
+  }
   &.block {
     display: block;
   }
@@ -729,6 +734,9 @@
     background: #f5f6f7;
     border: 1px solid #eeeff0;
     color: #8453aa;
+    &:hover {
+      background: #e6e7e8;
+    }
   }
   &.light {
     background: #fff;
