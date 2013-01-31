@@ -481,6 +481,48 @@ table {
 .page-header .progress.details {
   background-image: url(/images/progress.details.png);
 }
+.page-header .progress.done {
+  background-image: url(/images/progress.done.png);
+}
+.confirmation {
+  background: #000000 url(/images/confirmation.png);
+  height: 329px;
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+}
+.confirmation .message {
+  left: 220px;
+  position: absolute;
+  top: 36px;
+  width: 340px;
+}
+.confirmation .message h2 {
+  background: transparent url(/images/icon.check.purple.png) no-repeat 0 0;
+  color: #26282c;
+  font: italic 100 30px/36px "helvetica-neue-condensed", sans-serif;
+  margin-bottom: 10px;
+  padding-left: 36px;
+  text-transform: uppercase;
+}
+.confirmation .address {
+  left: 604px;
+  position: absolute;
+  top: 38px;
+}
+.confirmation .address h2 {
+  color: #26282c;
+  font: normal bold 12px/16px "helvetica-neue", sans-serif;
+  margin-bottom: 10px;
+}
+.confirmation .address p + p {
+  margin-top: 10px;
+}
+.confirmation a {
+  color: #8453aa;
+  font: normal normal 12px/1 "helvetica-neue", sans-serif;
+  text-decoration: none;
+}
 .columns {
   position: relative;
 }
