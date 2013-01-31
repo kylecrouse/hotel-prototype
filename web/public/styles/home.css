@@ -17,7 +17,7 @@
   position: relative;
   top: 0px;
   width: 100%;
-  height: 3453px;
+  height: 4308px;
   margin: 0;
 }
 #body .inner section .page {
@@ -26,25 +26,122 @@
   position: relative;
 }
 #body .inner section .page .page-bg {
-  position: relative;
+  position: absolute;
+}
+#body .inner section .page .page-bg.house {
+  width: 100%;
+  height: 800px;
+  background: #262626;
+}
+#body .inner section .page .page-grid-info {
+  color: #eee;
+  margin-top: 50px;
+  text-align: center;
+  font: lighter 15px/1 "helvetica-neue", sans-serif;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+#body .inner section .page .page-grid-title {
+  color: #fff;
+  text-align: center;
+  font: italic lighter 36px/1 "helvetica-neue-condensed", sans-serif;
+  text-transform: uppercase;
+}
+#body .inner section .page .page-grid-click {
+  clear: both;
+  color: #eee;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  font: lighter 14px/1;
+  font-style: italic;
+}
+#body .inner section .page .page-grid {
+  color: #fff;
+  width: 834px;
+  margin: 30px auto;
+}
+#body .inner section .page .page-grid .page-grid-item {
+  float: left;
+  margin-bottom: 50px;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-info {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 3px;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-name {
+  text-transform: uppercase;
+  line-height: 16px;
+  margin-bottom: 3px;
+  font-size: 13px;
+  font-style: italic;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-description {
+  font-size: 10px;
+  line-height: 12px;
+  width: 240px;
+  color: #888;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-description span {
+  color: #eee;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-style: italic;
+}
+#body .inner section .page .page-titles {
+  position: absolute;
+  top: 180px;
+  left: 120px;
+  width: 440px;
+}
+#body .inner section .page .page-titles.center {
+  text-align: center;
+  left: 280px;
+}
+#body .inner section .page .page-titles .first-title {
+  color: #eee;
+  font: lighter 14px/1 "helvetica-neue", sans-serif;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+#body .inner section .page .page-titles .second-title {
+  color: #fff;
+  font: italic lighter 50px/1 "helvetica-neue-condensed", sans-serif;
+  text-transform: uppercase;
+  line-height: 52px;
+}
+#body .inner section .page .page-titles .description {
+  color: #eee;
+  font: lighter 10px/1;
+  font-style: italic;
+  margin: 10px 90px 10px 90px;
+}
+#body .inner section .page .page-titles .click-title {
+  color: #eee;
+  font: lighter 14px/1;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-style: italic;
 }
 * {
   -webkit-overflow-scrolling: touch;
 }
 #page01 {
-  height: 560px;
+  height: 640px;
 }
 #page02 {
-  height: 780px;
+  height: 860px;
 }
 #page03 {
-  height: 382px;
+  height: 640px;
 }
 #page04 {
-  height: 382px;
+  height: 640px;
 }
 #page05 {
-  height: 382px;
+  height: 640px;
 }
 #page06 {
   height: 968px;
@@ -60,5 +157,5 @@
   width: 100%;
 }
 .mobile body #scroller {
-  height: 4600px;
+  height: 5460px;
 }

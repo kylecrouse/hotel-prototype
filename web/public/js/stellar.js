@@ -221,6 +221,10 @@
 				oldLeft = self._getScrollLeft(),
 				oldTop = self._getScrollTop();
 
+			if (!options || !options.firstLoad) {
+				this._reset();
+			}
+
 			this._setScrollLeft(0);
 			this._setScrollTop(0);
 
@@ -408,7 +412,7 @@
 
 				offsetLeft = $this.offset().left - marginLeft - scrollLeft;
 				offsetTop = $this.offset().top - marginTop - scrollTop;
-				
+
 				// Calculate the offset parent
 				$this.parents().each(function() {
 					var $this = $(this);
@@ -449,7 +453,7 @@
 				});
 			});
 		},
-		destroy: function() {
+		_reset: function() {
 			var particle,
 				startingPositionLeft,
 				startingPositionTop,
@@ -470,8 +474,14 @@
 
 			for (i = this.backgrounds.length - 1; i >= 0; i--) {
 				background = this.backgrounds[i];
+
+				background.$element.data('stellar-backgroundStartingLeft', null).data('stellar-backgroundStartingTop', null);
+
 				setBackgroundPosition(background.$element, background.startingValueLeft, background.startingValueTop);
 			}
+		},
+		destroy: function() {
+			this._reset();
 
 			this.$scrollElement.unbind('resize.' + this.name).unbind('scroll.' + this.name);
 			this._animationLoop = $.noop;
@@ -600,7 +610,7 @@
 					ticking = true;
 				}
 			};
-			
+
 			this.$scrollElement.bind('scroll.' + this.name, requestTick);
 			requestTick();
 		},
