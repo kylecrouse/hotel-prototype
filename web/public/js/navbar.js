@@ -19,13 +19,13 @@ $(document).ready(
       .waypoint(function(direction) {
         $(this).toggleClass('stuck', direction === 'down');
       }, {
-        offset: 90,
+        offset: 135,
       })
       .waypoint(function(direction) {
         $(this).toggleClass('bottom', direction === 'down');
       }, {
         offset: function() {
-          return -($('.left-column').outerHeight()-90-$(this).height());
+          return -($('.left-column').outerHeight()-135-$(this).height());
         }
       });
 
