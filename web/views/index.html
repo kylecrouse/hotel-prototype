@@ -38,17 +38,23 @@
         <div id="body">
           <div class="inner">
             <section>
-              <div class="page" id="page01" data-page="1" data-stellar-background-ratio="0.5">
+              <div class="page" id="page01" data-page="1" >
+                <img src="{{base}}images/homepage01_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
               </div>
-              <div class="page" id="page02" data-page="2" data-stellar-background-ratio="0.5">
+              <div class="page" id="page02" data-page="2">
+                <img src="{{base}}images/homepage02_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
               </div>
-              <div class="page" id="page03" data-page="3" data-stellar-background-ratio="0.5">
+              <div class="page" id="page03" data-page="3">
+                <img src="{{base}}images/homepage03_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
               </div>
-              <div class="page" id="page04" data-page="4" data-stellar-background-ratio="0.5">
+              <div class="page" id="page04" data-page="4">
+                <img src="{{base}}images/homepage04_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
               </div>
-              <div class="page" id="page05" data-page="5" data-stellar-background-ratio="0.5">
+              <div class="page" id="page05" data-page="5">
+                <img src="{{base}}images/homepage05_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
               </div>
-              <div class="page" id="page06" data-page="6" data-stellar-background-ratio="0.5">
+              <div class="page" id="page06" data-page="6">
+                <img src="{{base}}images/homepage06_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
               </div>
             </section>
           </div>
@@ -127,15 +133,24 @@
               positionProperty: 'transform',
               horizontalScrolling: false,
               verticalOffset: 0,
-              responsive: false,
+              parallaxBackgrounds: false,
+              parallaxElements: true,
+              hideDistantElements: false,
             });
           } else {
             $.stellar({
               horizontalScrolling: false,
               verticalOffset: 0,
-              responsive: false,
+              parallaxBackgrounds: false,
+              parallaxElements: true,
+              hideDistantElements: false,
             });
           }
+
+          //Prevent text selection
+          $(document).mousedown(function(e){
+            e.preventDefault();
+          });
         });
 
       })();
