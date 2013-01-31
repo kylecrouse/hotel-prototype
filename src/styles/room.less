@@ -1,0 +1,40 @@
+@import "carousel.less";
+
+.body-navbar {
+  background: #26282c;
+  font: normal normal 12px/1 "helvetica-neue", sans-serif;
+  margin: 0 -110px;
+  text-align: center;
+  text-transform: uppercase;
+  &.stuck {
+    position: fixed;
+    top: 60px;
+    width: 1200px;
+    z-index: 2;
+  }
+  &.bottom {
+    bottom: 0;
+    position: absolute;
+    top: auto;
+  }
+  ul {
+    padding: 40px 0;
+  }
+  li {
+    display: inline;
+    margin: 0 5px;
+  }
+  a {
+    border-radius: 15px;
+    color: #999;
+    padding: 8px 10px 5px;
+    text-decoration: none;
+  }
+  .on {
+    background: #fff;
+    color: #26282c;
+  }
+  .nav {
+    float: none;
+  }
+}

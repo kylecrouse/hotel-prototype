@@ -212,7 +212,7 @@ table {
   background: rgba(255, 255, 255, 0.95);
   height: 60px;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
 }
 .navbar.stuck {
   left: 0;
@@ -1296,4 +1296,59 @@ table {
 }
 .carousel {
   margin: 0 -110px;
+  overflow: hidden;
+}
+.carousel .inner {
+  padding: 0 !important;
+  white-space: nowrap;
+  width: 7200px;
+}
+.carousel .slide {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  float: left;
+  height: 700px;
+  width: 1200px;
+}
+.carousel img {
+  display: block;
+}
+.body-navbar {
+  background: #26282c;
+  font: normal normal 12px/1 "helvetica-neue", sans-serif;
+  margin: 0 -110px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.body-navbar.stuck {
+  position: fixed;
+  top: 60px;
+  width: 1200px;
+  z-index: 2;
+}
+.body-navbar.bottom {
+  bottom: 0;
+  position: absolute;
+  top: auto;
+}
+.body-navbar ul {
+  padding: 40px 0;
+}
+.body-navbar li {
+  display: inline;
+  margin: 0 5px;
+}
+.body-navbar a {
+  border-radius: 15px;
+  color: #999;
+  padding: 8px 10px 5px;
+  text-decoration: none;
+}
+.body-navbar .on {
+  background: #fff;
+  color: #26282c;
+}
+.body-navbar .nav {
+  float: none;
 }

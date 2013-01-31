@@ -6,7 +6,14 @@ $(document).ready(
         $('#header .navbar').toggleClass('bottom');
       }, {
         offset: 120
+      })
+      .waypoint(function(direction) {
+        $('.body-navbar').toggleClass('bottom');
+      }, {
+        offset: 212
       });
+
+    $('.body-navbar').waypoint('sticky',{offset:60});
 
     $('.receipt[data-toggle="sticky"]')
       .waypoint(function(direction) {
