@@ -51,6 +51,12 @@
       padding: 30px 0 25px; 
       text-align: left;
     }
+    li:first-child {
+      margin-left: -2px;
+      a {
+        padding-left: 0;
+      }
+    }
     li:not(:last-child) a:after {
       background: transparent url(/images/icon.arrow.large.gray.png) no-repeat 0 0;
       background-size: 100%;
@@ -69,7 +75,6 @@
       background: transparent;
       color: #26282c; 
       font-weight: 300; 
-      padding-left: 0;
     }
   }
 }
