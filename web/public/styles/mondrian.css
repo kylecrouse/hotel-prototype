@@ -375,7 +375,7 @@ table {
   #body {
     margin: 0 auto;
     padding: 0 70px;
-    width: 1020px;
+    width: 1060px;
   }
 }
 .gallery {
@@ -1048,9 +1048,9 @@ table {
 }
 @media (min-width: 1200px) {
   .other-options {
-    margin: 0 -90px;
-    padding-left: 90px;
-    padding-right: 90px;
+    margin: 0 -110px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 }
 .bang {
@@ -1293,4 +1293,7 @@ table {
 }
 .collapse.in {
   display: block;
+}
+.carousel {
+  margin: 0 -110px;
 }
