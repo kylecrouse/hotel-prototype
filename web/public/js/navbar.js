@@ -1,7 +1,12 @@
 $(document).ready(
   function(){
     $('#header .navbar').waypoint('sticky');
-    //$('.receipt').waypoint('sticky',{'offset':90});
+    $('#footer')
+      .waypoint(function(direction) {
+        $('#header .navbar').toggleClass('bottom');
+      }, {
+        offset: 120
+      });
 
     $('.receipt[data-toggle="sticky"]')
       .waypoint(function(direction) {
