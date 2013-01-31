@@ -214,6 +214,26 @@
 
 .mobile body {
   overflow: hidden;
+  #body {
+    width: 1024px;
+    .inner {
+      section {
+        height: 5453px;
+        .page {
+          .page-titles {
+            top: 180px;
+            left: 120px;
+            &.center{
+              left: 287px;
+            }
+          }
+          > img {
+            margin-left: -88px;
+          }
+        }
+      }
+    }
+  }
 
   #wrapper {
     position: absolute;
@@ -223,6 +243,6 @@
     width: 100%;
   }
   #scroller {
-    height: 5400px;
+    height: 6640px;
   }
 }

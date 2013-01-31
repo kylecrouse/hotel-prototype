@@ -203,6 +203,22 @@
 .mobile body {
   overflow: hidden;
 }
+.mobile body #body {
+  width: 1024px;
+}
+.mobile body #body .inner section {
+  height: 5453px;
+}
+.mobile body #body .inner section .page .page-titles {
+  top: 180px;
+  left: 120px;
+}
+.mobile body #body .inner section .page .page-titles.center {
+  left: 287px;
+}
+.mobile body #body .inner section .page > img {
+  margin-left: -88px;
+}
 .mobile body #wrapper {
   position: absolute;
   top: 0;
@@ -211,5 +227,5 @@
   width: 100%;
 }
 .mobile body #scroller {
-  height: 5400px;
+  height: 6640px;
 }
