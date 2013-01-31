@@ -108,6 +108,9 @@
                   <a class="click-title">reveal more</a>
                 </div>
               </div>
+              <div class="page" id="page07" data-page="7">
+                <video id="mondrian_video" src="{{base}}videos/mondrian.mov" type="video/mov" width="1200px" height="675px" autoplay loop muted></video>
+              </div>
               <div class="page" id="page05" data-page="5">
                 <img src="{{base}}images/homepage05_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
               </div>
@@ -177,9 +180,16 @@
 
     <div id="booknow">
       <p id="nowBtn">&lt; BOOK NOW</p>
+      <div id="bookmenu">
+        <p>MAKE IT HAPPEN:</p>
+        <div class="bookbtn"><p>FEB 8, 2013</p></div>
+        <div class="bookbtn"><p>FEB 8, 2013</p></div>
+        <div class="bookbtn black"><p>BOOK NOW<p></div>
+      </div>
     </div>
     <script src="{{base}}js/jquery.min.js"></script>
     <script src="{{base}}js/iscroll.js"></script>
+    <script src="{{base}}js/waypoints.min.js"></script>
     <script src="{{base}}js/stellar.js"></script>
     <script>
       (function(){
@@ -194,7 +204,14 @@
           var iScrollInstance;
 
           if (isMobileWebkit) {
-            iScrollInstance = new iScroll('wrapper');
+            iScrollInstance = new iScroll('wrapper', {
+              onScrollStart: function() {
+                if( !$("#booknow").hasClass('short') )
+                {
+                  hideBookMenu();
+                }
+              }
+            });
 
             $('#scroller').stellar({
               scrollProperty: 'transform',
@@ -205,6 +222,8 @@
               parallaxElements: true,
               hideDistantElements: false,
             });
+            $("#page07").remove();
+
           } else {
             $.stellar({
               horizontalScrolling: false,
@@ -221,21 +240,54 @@
           });
         });
 
+        function showBookMenu(){
+          $("#booknow").removeClass('short').animate({
+            width: '400px',
+          }, 200);
+          $("#nowBtn").fadeOut('fast', function (){
+            $("#bookmenu").fadeIn('fast');
+          });
+        }
+
+        function hideBookMenu(){
+          $("#booknow").addClass('short').animate({
+            width: '100px',
+          }, 200);
+          $("#bookmenu").hide();
+          $("#nowBtn").fadeIn();
+        }
+
         $("#booknow").bind('click', function(){
           if( $(this).hasClass('short') )
           {
-            $(this).removeClass('short').animate({
-              width: '400px',
-            }, 500);
-            $("#nowBtn").fadeOut();
-          }
-          else {
-            $(this).addClass('short').animate({
-              width: '100px',
-            }, 500);
-            $("#nowBtn").fadeIn();
+            showBookMenu();
           }
         });
+
+        $("#booknow").hover( function(){
+          if( $("#booknow").hasClass('short') )
+          {
+            showBookMenu();
+          }
+        });
+
+        $('#body').waypoint(function(direction) {
+          console.log(direction);
+          if( !$("#booknow").hasClass('short') )
+          {
+            hideBookMenu();
+          }
+        });
+
+        function alignBookMenu(){
+          var rightSpace = ($(window).width() - $("#body").width())/2;
+          console.log(rightSpace);
+          $("#booknow").css('right', rightSpace);
+        }
+        $(window).resize(function() {
+          alignBookMenu();
+        });
+        alignBookMenu();
 
       })();
 
