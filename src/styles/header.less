@@ -2,7 +2,8 @@
   background: #fff;
   color: #26282c;
   font: 12px/20px "helvetica-neue", sans-serif;
-  height: 120px;
+  height: 60px;
+  padding-top: 60px;
   text-transform: uppercase;
   .inner {
     position: relative;
@@ -21,12 +22,14 @@
 }
 .navbar {
   background: rgba(255,255,255,0.95);
-  left: 0;
   height: 60px;
-  position: fixed;
-  top: 60px;
   width: 100%;
   z-index: 2;  
+  &.stuck {
+    left: 0;
+    position: fixed;
+    top: 0;
+  }
   .inner {
     padding-top: 22px;
   }
@@ -48,8 +51,12 @@
  }
 .utility-navbar {
   font-size: 10px;
-  padding-top: 25px;
   text-align: right;
+  .inner {
+    position: absolute;
+    right: 0;
+    top: -95px;
+  }
   li {
     margin-left: 20px !important;
     &:not(:first-child) a {

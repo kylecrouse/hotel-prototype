@@ -39,6 +39,10 @@
   }
 }
 
+.columns {
+  position: relative;
+  .clearfix;
+}
 .left-column {
   float: left;
   margin-bottom: 55px;
@@ -53,6 +57,9 @@
   background-color: #fff;
   margin-bottom: 15px;
   padding: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   h2 {
     color: #26282c;
     font: bold 14px/1 "helvetica-neue", sans-serif;
@@ -310,9 +317,20 @@
     }
   }
 }
-
+#body { position: relative; }
 .receipt {
   font: normal normal 12px/16px "helvetica-neue", sans-serif;
+  &.stuck {
+    position: fixed;
+    top: 90px;
+    width: 236px;
+  }
+  &.bottom {
+    bottom: 55px;
+    position: absolute;
+    top: auto;
+    width: 236px;
+  }
   .status {
     background: #26282c;
     color: #fff;
@@ -392,7 +410,7 @@
         color: #a0a2a6;
         font-weight: normal;
         text-align: left;
-        width: 40%;
+        width: 50%;
       }
       strong {
         color: #8453aa;

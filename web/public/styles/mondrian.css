@@ -187,7 +187,8 @@ table {
   background: #fff;
   color: #26282c;
   font: 12px/20px "helvetica-neue", sans-serif;
-  height: 120px;
+  height: 60px;
+  padding-top: 60px;
   text-transform: uppercase;
 }
 #header .inner {
@@ -206,12 +207,14 @@ table {
 }
 .navbar {
   background: rgba(255, 255, 255, 0.95);
-  left: 0;
   height: 60px;
-  position: fixed;
-  top: 60px;
   width: 100%;
   z-index: 2;
+}
+.navbar.stuck {
+  left: 0;
+  position: fixed;
+  top: 0;
 }
 .navbar .inner {
   padding-top: 22px;
@@ -233,8 +236,12 @@ table {
 }
 .utility-navbar {
   font-size: 10px;
-  padding-top: 25px;
   text-align: right;
+}
+.utility-navbar .inner {
+  position: absolute;
+  right: 0;
+  top: -95px;
 }
 .utility-navbar li {
   margin-left: 20px !important;
@@ -474,6 +481,17 @@ table {
 .page-header .progress.details {
   background-image: url(/images/progress.details.png);
 }
+.columns {
+  position: relative;
+}
+.columns:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 .left-column {
   float: left;
   margin-bottom: 55px;
@@ -487,6 +505,9 @@ table {
   background-color: #fff;
   margin-bottom: 15px;
   padding: 20px;
+}
+.room:last-child {
+  margin-bottom: 0;
 }
 .room h2 {
   color: #26282c;
@@ -769,8 +790,22 @@ table {
   display: block;
   margin: 20px auto 0;
 }
+#body {
+  position: relative;
+}
 .receipt {
   font: normal normal 12px/16px "helvetica-neue", sans-serif;
+}
+.receipt.stuck {
+  position: fixed;
+  top: 90px;
+  width: 236px;
+}
+.receipt.bottom {
+  bottom: 55px;
+  position: absolute;
+  top: auto;
+  width: 236px;
 }
 .receipt .status {
   background: #26282c;
@@ -861,7 +896,7 @@ table {
   color: #a0a2a6;
   font-weight: normal;
   text-align: left;
-  width: 40%;
+  width: 50%;
 }
 .receipt .details .code strong {
   color: #8453aa;
