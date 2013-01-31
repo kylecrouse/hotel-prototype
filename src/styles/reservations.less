@@ -36,9 +36,56 @@
     &.details {
       background-image: url(/images/progress.details.png);
     }
+    &.done {
+      background-image: url(/images/progress.done.png);
+    }
   }
 }
 
+.confirmation {
+  background: #000 url(/images/confirmation.png);
+  height: 329px;
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+  .message {
+    left: 220px;
+    position: absolute;
+    top: 36px;
+    width: 340px;
+  }
+  .message h2 {
+    background: transparent url(/images/icon.check.purple.png) no-repeat 0 0;
+    color: #26282c;
+    font: italic 100 30px/36px "helvetica-neue-condensed", sans-serif;
+    margin-bottom: 10px;
+    padding-left: 36px;
+    text-transform: uppercase;
+  }
+  .address {
+    left: 604px;
+    position: absolute;
+    top: 38px;
+  }
+  .address h2 {
+    color: #26282c;
+    font: normal bold 12px/16px "helvetica-neue", sans-serif;
+    margin-bottom: 10px;
+  }
+  .address p + p {
+    margin-top: 10px;
+  }
+  a {
+    color: #8453aa;
+    font: normal normal 12px/1 "helvetica-neue", sans-serif;
+    text-decoration: none;
+  }
+}
+
+.columns {
+  position: relative;
+  .clearfix;
+}
 .left-column {
   float: left;
   margin-bottom: 55px;
@@ -53,6 +100,9 @@
   background-color: #fff;
   margin-bottom: 15px;
   padding: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
   h2 {
     color: #26282c;
     font: bold 14px/1 "helvetica-neue", sans-serif;
@@ -65,6 +115,36 @@
   .amenities-title {
     float: left;
     margin-bottom: 10px;
+  }
+  .actions {
+    float: right;
+    font: normal normal 12px/16px "helvetica-neue", sans-serif;
+    a {
+      color: #8453aa;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+    span {
+      background-color: transparent;
+      background-image: url(/images/icon.actions.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 14px;
+      margin-right: 4px;
+      vertical-align: top;
+      &.print {
+        background-position: 0 0;
+        width: 14px;
+      }
+      &.email {
+        background-position: -14px 0;
+        width: 13px;
+      }
+      &.edit {
+        background-position: -27px 0;
+        width: 10px;
+      }
+    }
   }
   .room-booking {
     float: right;
@@ -310,9 +390,20 @@
     }
   }
 }
-
+#body { position: relative; }
 .receipt {
   font: normal normal 12px/16px "helvetica-neue", sans-serif;
+  &.stuck {
+    position: fixed;
+    top: 90px;
+    width: 236px;
+  }
+  &.bottom {
+    bottom: 55px;
+    position: absolute;
+    top: auto;
+    width: 236px;
+  }
   .status {
     background: #26282c;
     color: #fff;
@@ -392,7 +483,7 @@
         color: #a0a2a6;
         font-weight: normal;
         text-align: left;
-        width: 40%;
+        width: 50%;
       }
       strong {
         color: #8453aa;
@@ -462,9 +553,36 @@
 }
 @media (min-width: 1200px) {
   .other-options {
-    margin: 0 -90px;
-    padding-left: 90px;
-    padding-right: 90px;
+    margin: 0 -110px;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}
+
+.bang {
+  background: transparent url(/images/bang.png) no-repeat 40px 10px;
+  margin: 0 !important;
+  min-height: 320px;
+  padding-top: 75px !important;
+  padding-left: 350px;
+  h2 {
+    font: italic 100 40px/1 "helvetica-neue-condensed", sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  h3 {
+    margin-bottom: 15px;
+  }
+}
+
+.make-some-noise {
+  background: #e6e7ed url(/images/make-some-noise.png) no-repeat 50% 120px;
+  margin: -82px -20px 0;
+  padding: 80px 0 150px;
+  text-align: center;
+  h2 {
+    font: italic 100 32px/1 "helvetica-neue-condensed", sans-serif;
+    text-transform: uppercase;
   }
 }
 
@@ -678,4 +796,11 @@
   top: -1px;
   width: 10px;
   vertical-align: middle;
+}
+
+.collapse {
+  display: none;
+  &.in {
+    display: block;
+  }
 }

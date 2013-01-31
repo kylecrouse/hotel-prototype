@@ -1,10 +1,8 @@
 #footer {
   margin-top: 0px;
 }
-.navbar {
-  position: relative;
-}
 #body {
+  width: 1024px;
   padding: 0;
 }
 #body .inner {
@@ -17,7 +15,7 @@
   position: relative;
   top: 0px;
   width: 100%;
-  height: 4308px;
+  height: 4388px;
   margin: 0;
 }
 #body .inner section .page {

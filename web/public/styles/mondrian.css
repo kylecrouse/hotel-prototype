@@ -183,11 +183,15 @@ table {
   padding: 0 20px;
   width: 980px;
 }
+#wrapper {
+  position: relative;
+}
 #header {
   background: #fff;
   color: #26282c;
   font: 12px/20px "helvetica-neue", sans-serif;
-  height: 120px;
+  height: 60px;
+  padding-top: 60px;
   text-transform: uppercase;
 }
 #header .inner {
@@ -206,12 +210,19 @@ table {
 }
 .navbar {
   background: rgba(255, 255, 255, 0.95);
-  left: 0;
   height: 60px;
-  position: fixed;
-  top: 60px;
   width: 100%;
   z-index: 2;
+}
+.navbar.stuck {
+  left: 0;
+  position: fixed;
+  top: 0;
+}
+.navbar.bottom {
+  bottom: 0;
+  position: absolute;
+  top: auto;
 }
 .navbar .inner {
   padding-top: 22px;
@@ -233,8 +244,12 @@ table {
 }
 .utility-navbar {
   font-size: 10px;
-  padding-top: 25px;
   text-align: right;
+}
+.utility-navbar .inner {
+  position: absolute;
+  right: 0;
+  top: -95px;
 }
 .utility-navbar li {
   margin-left: 20px !important;
@@ -360,7 +375,7 @@ table {
   #body {
     margin: 0 auto;
     padding: 0 70px;
-    width: 1020px;
+    width: 1060px;
   }
 }
 .gallery {
@@ -474,6 +489,59 @@ table {
 .page-header .progress.details {
   background-image: url(/images/progress.details.png);
 }
+.page-header .progress.done {
+  background-image: url(/images/progress.done.png);
+}
+.confirmation {
+  background: #000000 url(/images/confirmation.png);
+  height: 329px;
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+}
+.confirmation .message {
+  left: 220px;
+  position: absolute;
+  top: 36px;
+  width: 340px;
+}
+.confirmation .message h2 {
+  background: transparent url(/images/icon.check.purple.png) no-repeat 0 0;
+  color: #26282c;
+  font: italic 100 30px/36px "helvetica-neue-condensed", sans-serif;
+  margin-bottom: 10px;
+  padding-left: 36px;
+  text-transform: uppercase;
+}
+.confirmation .address {
+  left: 604px;
+  position: absolute;
+  top: 38px;
+}
+.confirmation .address h2 {
+  color: #26282c;
+  font: normal bold 12px/16px "helvetica-neue", sans-serif;
+  margin-bottom: 10px;
+}
+.confirmation .address p + p {
+  margin-top: 10px;
+}
+.confirmation a {
+  color: #8453aa;
+  font: normal normal 12px/1 "helvetica-neue", sans-serif;
+  text-decoration: none;
+}
+.columns {
+  position: relative;
+}
+.columns:after {
+  clear: both;
+  content: '.';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
 .left-column {
   float: left;
   margin-bottom: 55px;
@@ -488,6 +556,9 @@ table {
   margin-bottom: 15px;
   padding: 20px;
 }
+.room:last-child {
+  margin-bottom: 0;
+}
 .room h2 {
   color: #26282c;
   font: bold 14px/1 "helvetica-neue", sans-serif;
@@ -500,6 +571,36 @@ table {
 .room .amenities-title {
   float: left;
   margin-bottom: 10px;
+}
+.room .actions {
+  float: right;
+  font: normal normal 12px/16px "helvetica-neue", sans-serif;
+}
+.room .actions a {
+  color: #8453aa;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.room .actions span {
+  background-color: transparent;
+  background-image: url(/images/icon.actions.png);
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: top;
+}
+.room .actions span.print {
+  background-position: 0 0;
+  width: 14px;
+}
+.room .actions span.email {
+  background-position: -14px 0;
+  width: 13px;
+}
+.room .actions span.edit {
+  background-position: -27px 0;
+  width: 10px;
 }
 .room .room-booking {
   float: right;
@@ -769,8 +870,22 @@ table {
   display: block;
   margin: 20px auto 0;
 }
+#body {
+  position: relative;
+}
 .receipt {
   font: normal normal 12px/16px "helvetica-neue", sans-serif;
+}
+.receipt.stuck {
+  position: fixed;
+  top: 90px;
+  width: 236px;
+}
+.receipt.bottom {
+  bottom: 55px;
+  position: absolute;
+  top: auto;
+  width: 236px;
 }
 .receipt .status {
   background: #26282c;
@@ -861,7 +976,7 @@ table {
   color: #a0a2a6;
   font-weight: normal;
   text-align: left;
-  width: 40%;
+  width: 50%;
 }
 .receipt .details .code strong {
   color: #8453aa;
@@ -933,10 +1048,35 @@ table {
 }
 @media (min-width: 1200px) {
   .other-options {
-    margin: 0 -90px;
-    padding-left: 90px;
-    padding-right: 90px;
+    margin: 0 -110px;
+    padding-left: 110px;
+    padding-right: 110px;
   }
+}
+.bang {
+  background: transparent url(/images/bang.png) no-repeat 40px 10px;
+  margin: 0 !important;
+  min-height: 320px;
+  padding-top: 75px !important;
+  padding-left: 350px;
+}
+.bang h2 {
+  font: italic 100 40px/1 "helvetica-neue-condensed", sans-serif;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+.bang h3 {
+  margin-bottom: 15px;
+}
+.make-some-noise {
+  background: #e6e7ed url(/images/make-some-noise.png) no-repeat 50% 120px;
+  margin: -82px -20px 0;
+  padding: 80px 0 150px;
+  text-align: center;
+}
+.make-some-noise h2 {
+  font: italic 100 32px/1 "helvetica-neue-condensed", sans-serif;
+  text-transform: uppercase;
 }
 .secure {
   background: transparent url(/images/icon.lock.png) no-repeat 0 40%;
@@ -1147,4 +1287,13 @@ table {
   top: -1px;
   width: 10px;
   vertical-align: middle;
+}
+.collapse {
+  display: none;
+}
+.collapse.in {
+  display: block;
+}
+.carousel {
+  margin: 0 -110px;
 }
