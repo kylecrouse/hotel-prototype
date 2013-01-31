@@ -234,6 +234,9 @@ table {
   line-height: 1;
   margin: 0;
 }
+.brand a {
+  color: #26282c !important;
+}
 .brand span {
   background: transparent url(/images/world.png) no-repeat 100% -1px;
   font-weight: 100;
