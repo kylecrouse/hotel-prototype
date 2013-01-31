@@ -116,6 +116,36 @@
     float: left;
     margin-bottom: 10px;
   }
+  .actions {
+    float: right;
+    font: normal normal 12px/16px "helvetica-neue", sans-serif;
+    a {
+      color: #8453aa;
+      margin-left: 10px;
+      text-decoration: none;
+    }
+    span {
+      background-color: transparent;
+      background-image: url(/images/icon.actions.png);
+      background-repeat: no-repeat;
+      display: inline-block;
+      height: 14px;
+      margin-right: 4px;
+      vertical-align: top;
+      &.print {
+        background-position: 0 0;
+        width: 14px;
+      }
+      &.email {
+        background-position: -14px 0;
+        width: 13px;
+      }
+      &.edit {
+        background-position: -27px 0;
+        width: 10px;
+      }
+    }
+  }
   .room-booking {
     float: right;
     .room-rate {
@@ -526,6 +556,33 @@
     margin: 0 -90px;
     padding-left: 90px;
     padding-right: 90px;
+  }
+}
+
+.bang {
+  background: transparent url(/images/bang.png) no-repeat 40px 10px;
+  margin: 0 !important;
+  min-height: 320px;
+  padding-top: 75px !important;
+  padding-left: 350px;
+  h2 {
+    font: italic 100 40px/1 "helvetica-neue-condensed", sans-serif;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  h3 {
+    margin-bottom: 15px;
+  }
+}
+
+.make-some-noise {
+  background: #e6e7ed url(/images/make-some-noise.png) no-repeat 50% 120px;
+  margin: -82px -20px 0;
+  padding: 80px 0 150px;
+  text-align: center;
+  h2 {
+    font: italic 100 32px/1 "helvetica-neue-condensed", sans-serif;
+    text-transform: uppercase;
   }
 }
 
