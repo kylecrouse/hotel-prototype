@@ -3,7 +3,7 @@ $(document).ready(
     $('#header .navbar').waypoint('sticky');
     //$('.receipt').waypoint('sticky',{'offset':90});
 
-    $('.receipt')
+    $('.receipt[data-toggle="sticky"]')
       .waypoint(function(direction) {
         $(this).toggleClass('stuck', direction === 'down');
       }, {
