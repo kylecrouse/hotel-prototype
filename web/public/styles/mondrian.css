@@ -209,7 +209,7 @@ table {
   color: #26282c;
 }
 .navbar {
-  background: rgba(255, 255, 255, 0.95);
+  background: #fff;
   height: 60px;
   width: 100%;
   z-index: 3;
@@ -233,6 +233,9 @@ table {
   font-size: 20px;
   line-height: 1;
   margin: 0;
+}
+.brand a {
+  color: #26282c !important;
 }
 .brand span {
   background: transparent url(/images/world.png) no-repeat 100% -1px;
@@ -545,6 +548,7 @@ table {
 .left-column {
   float: left;
   margin-bottom: 55px;
+  position: relative;
   width: 732px;
 }
 .right-column {
@@ -878,7 +882,7 @@ table {
 }
 .receipt.stuck {
   position: fixed;
-  top: 90px;
+  top: 135px;
   width: 236px;
 }
 .receipt.bottom {
@@ -1351,4 +1355,43 @@ table {
 }
 .body-navbar .nav {
   float: none;
+}
+.body-navbar.booking {
+  background-color: #f5f6f7;
+  margin: 0;
+}
+.body-navbar.booking.stuck {
+  margin: 0 -110px;
+  padding: 0 110px;
+  width: 980px;
+}
+.body-navbar.booking .nav {
+  font: italic 100 20px/1 helvetica-neue-condensed, sans-serif;
+  padding: 30px 0 25px;
+  text-align: left;
+}
+.body-navbar.booking li:first-child {
+  margin-left: -2px;
+}
+.body-navbar.booking li:first-child a {
+  padding-left: 0;
+}
+.body-navbar.booking li:not(:last-child) a:after {
+  background: transparent url(/images/icon.arrow.large.gray.png) no-repeat 0 0;
+  background-size: 100%;
+  content: '.';
+  display: inline-block;
+  height: 11px;
+  left: 18px;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  top: -2px;
+  width: 9px;
+  -webkit-transform: rotate(-90deg);
+}
+.body-navbar.booking .on {
+  background: transparent;
+  color: #26282c;
+  font-weight: 300;
 }
