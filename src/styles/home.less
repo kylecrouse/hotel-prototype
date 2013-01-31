@@ -2,36 +2,62 @@
   margin-top: 0px;
 }
 
-#body .inner 
-{
+.navbar {
   position: relative;
-  section {
-    position: relative;
-    top: 200px;
-    width: 300px;
-    height: 600px;
-    margin: 0 auto;
-    .pixel {
-      position: absolute;
-      width: 15px;
-      height: 15px;
-      border-radius: 15px;
-      background: black;
-    }
-
-    .pixel:nth-child(2)  { left: 30px;  }
-    .pixel:nth-child(3)  { left: 60px;  }
-    .pixel:nth-child(4)  { left: 90px;  }
-    .pixel:nth-child(5)  { left: 120px; }
-    .pixel:nth-child(6)  { left: 150px; }
-    .pixel:nth-child(7)  { left: 180px; }
-    .pixel:nth-child(8)  { left: 210px; }
-    .pixel:nth-child(9)  { left: 240px; }
-    .pixel:nth-child(10) { left: 270px; }
-  } 
 }
 
-.mobile #body .inner {
+#body
+{
+  padding: 0;
+  .inner 
+  {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    section {
+      position: relative;
+      top: 0px;
+      width: 100%;
+      height: 3453px;
+      margin: 0;
+      // background: green;
+      .page {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .page-bg {
+          position: relative;
+        }
+      }
+    } 
+  }
+}
+
+*{
+  -webkit-overflow-scrolling:touch;
+}
+
+#page01 {
+  height: 560px;
+}
+#page02 {
+  height: 780px;
+}
+#page03 {
+  height: 382px;
+}
+#page04 {
+  height: 382px;
+}
+#page05 {
+  height: 382px;
+}
+#page06 {
+  height: 968px;
+}
+
+.mobile body {
   overflow: hidden;
 
   #wrapper {
@@ -41,7 +67,7 @@
     left: 0;
     width: 100%;
   }
-  .mobile #scroller {
-    height: 800px;
+  #scroller {
+    height: 4600px;
   }
 }
