@@ -15,7 +15,7 @@
   position: relative;
   top: 0px;
   width: 100%;
-  height: 6480px;
+  height: 6360px;
   margin: 0;
 }
 #body .inner section .page {
@@ -29,10 +29,10 @@
 #body .inner section .page .page-bg.house {
   width: 100%;
   height: 920px;
-  background: #26282c;
+  background: #ffffff;
 }
 #body .inner section .page .page-grid-info {
-  color: #eee;
+  color: #000;
   margin-top: 70px;
   text-align: center;
   font: normal 15px/1 "helvetica-neue", sans-serif;
@@ -40,14 +40,14 @@
   margin-bottom: 15px;
 }
 #body .inner section .page .page-grid-title {
-  color: #fff;
+  color: #000;
   text-align: center;
-  font: italic normal 40px/1 "helvetica-neue-condensed", sans-serif;
+  font: normal 40px/1 "helvetica-neue", sans-serif;
   text-transform: uppercase;
 }
 #body .inner section .page .page-grid-click {
   clear: both;
-  color: #eee;
+  color: #000;
   text-transform: uppercase;
   text-decoration: underline;
   text-align: center;
@@ -56,7 +56,7 @@
   padding-top: 20px;
 }
 #body .inner section .page .page-grid {
-  color: #fff;
+  color: #000;
   width: 840px;
   margin: 30px auto;
 }
@@ -84,7 +84,7 @@
   color: #888;
 }
 #body .inner section .page .page-grid .page-grid-item .grid-item-description span {
-  color: #eee;
+  color: #000;
   text-decoration: underline;
   text-transform: uppercase;
   font-style: italic;
@@ -107,7 +107,7 @@
 }
 #body .inner section .page .page-titles .second-title {
   color: #fff;
-  font: italic normal 50px/1 "helvetica-neue-condensed", sans-serif;
+  font: normal 50px/1 "helvetica-neue", sans-serif;
   text-transform: uppercase;
   margin-bottom: 15px;
   margin-left: -5px;
@@ -152,7 +152,7 @@
   height: 475px;
 }
 #ipad_booknow {
-  background: #8453aa;
+  background: #71cbd3;
   height: 90px;
   position: fixed;
   top: 300px;
@@ -184,7 +184,7 @@
   position: relative;
 }
 #ipad_booknow #bookmenu .bookbtn p span {
-  background: #482167 url(/images/icon.calendar.mondrian.png) 50% 50% no-repeat;
+  background: #009fb2 url(/images/icon.calendar.delano.png) 50% 50% no-repeat;
   border-radius: 0 2px 2px 0;
   height: 36px;
   position: absolute;
