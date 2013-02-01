@@ -5,7 +5,7 @@
     <link href="{{base}}styles/mondrian.css" rel="stylesheet">
     <meta name="viewport" content="width=1020">
   </head>
-  <body>
+  <body id="room">
 
     <div id="wrapper">
 
@@ -34,15 +34,33 @@
         </div>
       </div>
 
+      <div id="booknow">
+        <p id="nowBtn"><span>&lt;</span> BOOK NOW</p>
+        <div id="bookmenu">
+          <p>MAKE IT HAPPEN:</p>
+          <div class="bookbtn"><p>02/08/2013<span></span></p></div>
+          <div class="bookbtn"><p>02/08/2013<span></span></p></div>
+          <div class="bookbtn black"><p>BOOK NOW<p></div>
+        </div>
+      </div>
+
       <div id="body">
         <div class="inner" style="padding-top: 0;">
           
           <div class="carousel" id="gallery">
+            <ul class="indicator">
+              <li><a class="on" href="#1" data-slide="1">1</a></li>
+              <li><a href="#2" data-slide="2">2</a></li>
+              <li><a href="#3" data-slide="3">3</a></li>
+              <li><a href="#4" data-slide="4">4</a></li>
+              <li><a href="#5" data-slide="5">5</a></li>
+              <li><a href="#6" data-slide="6">6</a></li>
+            </ul>
             <div class="inner">
               <div class="slide" style="background-image: url(/images/1.jpg);">
                 <div style="color: #fff; padding-top: 290px; text-align: center;">
-                  <div style="font: normal 300 20px/50px helvetica-neue,sans-serif; text-transform: uppercase;">Our Rooms</div>
-                  <div style="font: italic normal 100px/90px helvetica-neue-condensed, sans-serif; margin-bottom: 10px; text-transform: uppercase;">Deluxe</div>
+                  <div style="font: normal normal 20px/50px helvetica-neue,sans-serif; text-transform: uppercase;">Our Rooms</div>
+                  <div style="font: italic normal 100px/90px helvetica-neue-condensed, sans-serif; text-indent: -15px; margin-bottom: 10px; text-transform: uppercase;">Deluxe</div>
                 </div>
               </div>
               <div class="slide">
@@ -74,7 +92,7 @@
           </div>
 
           <div style="padding: 150px 0; text-align: center;">
-            <div style="color: #26282c; font: normal 300 20px/40px helvetica-neue,sans-serif; text-transform: uppercase;">Deluxe Room</div>
+            <div style="color: #26282c; font: normal normal 20px/40px helvetica-neue,sans-serif; text-transform: uppercase;">Deluxe Room</div>
             <div style="color: #26282c; font: italic normal 50px/50px helvetica-neue-condensed, sans-serif; text-transform: uppercase;">The High Life</div>
             <p style="font-size: 14px; line-height: 26px; margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>eiusmod tempor dolor e pluribus unum consectat dolor.</p>
           </div>
@@ -89,7 +107,7 @@
           </div>
 
           <div style="background: transparent url(/images/sleep-in-a-dream.png) no-repeat 0 0; color: #fff; height: 1480px; margin: -360px -110px 0; padding-top: 665px; text-align: center; text-transform: uppercase; -webkit-box-sizing: border-box;">
-            <div style="font: normal 300 20px/40px helvetica-neue,sans-serif;">sleep in Soho</div>
+            <div style="font: normal normal 20px/40px helvetica-neue,sans-serif;">sleep in Soho</div>
             <div style="font: italic normal 50px/50px helvetica-neue-condensed, sans-serif;">Wake Up in a dream</div>
           </div>
 
@@ -124,15 +142,54 @@
           </div>
 
           <div style="background: transparent url(/images/equinox.png) no-repeat 0 0; color: #fff; margin: 0 -110px; height: 800px; overflow: hidden; padding-top: 365px; text-align: center; -webkit-box-sizing: border-box;">
-            <div style="font: normal 300 20px/40px helvetica-neue,sans-serif; text-transform: uppercase;">Deluxe Fitness</div>
+            <div style="font: normal normal 20px/40px helvetica-neue,sans-serif; text-transform: uppercase;">Deluxe Fitness</div>
             <div style="font: italic normal 50px/50px helvetica-neue-condensed, sans-serif; margin-bottom: 10px; text-transform: uppercase;">Equinox VIP Access</div>
             <p style="font-size: 14px;"><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>eiusmod tempor dolor e pluribus unum consectat dolor.</i></p>
           </div>
+
+          <div style="background: #fff url(/images/malin-goetz.jpg) no-repeat 60% 250px; color: #26282c; margin: 0 -110px; padding: 630px 0 300px; text-align: center;">
+            <div style="font: normal normal 20px/40px helvetica-neue,sans-serif; text-transform: uppercase;">Products</div>
+            <div style="font: italic normal 50px/50px helvetica-neue-condensed, sans-serif; text-transform: uppercase; margin-bottom: 10px;">So Fresh &amp; So Clean</div>
+            <p style="font-size: 14px; font-style: italic;">Lorem ipsum dolor sit amet, consectetur adipisicing elit,<br>eiusmod tempor dolor e pluribus unum consectat dolor.<br><a href="#" style="color: #26282c; margin-top: 10px; display: block; text-decoration: underline; text-transform: uppercase;">BOOK NOW</a></p>
+          </div>
+
+          <div style="background: transparent url(/images/designer.jpg) no-repeat 0 0; color: #fff; height: 600px; margin: 0 -110px; padding-top: 354px; text-align: center; -webkit-box-sizing: border-box;">
+                      <div style="font: normal normal 20px/40px helvetica-neue,sans-serif; text-transform: uppercase;">Designing the Look</div>
+            <div style="font: italic normal 50px/50px helvetica-neue-condensed, sans-serif; text-transform: uppercase;">Benjamin Noriega-Ortiz</div>
+          </div>
+
+          <div style="background: transparent url(/images/quote.jpg) no-repeat 0 0; color: #fff; height: 1100px; margin: 0 -110px; padding-top: 450px; text-align:center; -webkit-box-sizing: border-box; font-style: italic;">
+            <p style="text-transform: uppercase; font-size: 24px; line-height: 36px; width: 660px; margin: 0 auto;">I am obsessed with storytelling. In my fantasy, if the city is the beast, then Mondrian is the beauty. It attacks at first, but then seduces.</p>
+            <p style="font-size: 14px; margin-top: 150px; text-indent: -35px;">- Benjamin Noriega-Ortiz</p>
+          </div>
+
+          <div style="background: #fff; color: #26282c; margin: 0 -110px; padding: 70px 0 200px;">
+            <div style="font: normal normal 20px/40px helvetica-neue,sans-serif; text-align: center; text-transform: uppercase;">Explore</div>
+            <div style="font: italic normal 50px/50px helvetica-neue-condensed, sans-serif; margin-bottom: 70px; text-align: center; text-transform: uppercase;">Other Rooms</div>
+            <div style="width: 981px; margin: 0 auto;">
+              <div style="display: inline-block; width: 327px;">
+                <img style="display: block;" src="/images/other.superior.jpg">
+                <p style="font-size: 14px; font-style: italic; line-height: 20px; margin: 5px 0; text-transform: uppercase;">Superior</p>
+                <p style="color: #888; font-size: 11px; line-height: 16px;">Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod exer...  <span style="color: #26282c; font-style: italic; text-decoration: underline; text-transform: uppercase;">More</span></p>
+              </div>
+              <div style="display: inline-block; margin-left: -3px; width: 327px;">
+                <img style="display: block;" src="/images/other.deluxe.jpg">
+                <p style="font-size: 14px; font-style: italic; line-height: 20px; margin: 5px 0; text-transform: uppercase;">Deluxe Double Room</p>
+                <p style="color: #888; font-size: 11px; line-height: 16px;">Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod exer...  <span style="color: #26282c; font-style: italic; text-decoration: underline; text-transform: uppercase;">More</span></p>
+              </div>
+              <div style="display: inline-block; margin-left: -3px; width: 327px;">
+                <img style="display: block;" src="/images/other.penthouse.jpg">
+                <p style="font-size: 14px; font-style: italic; line-height: 20px; margin: 5px 0; text-transform: uppercase;">Penthouse</p>
+                <p style="color: #888; font-size: 11px; line-height: 16px;">Lorem ipsum dolor sit amet, consectetur<br>adipisicing elit, sed do eiusmod exer...  <span style="color: #26282c; font-style: italic; text-decoration: underline; text-transform: uppercase;">More</span></p>
+              </div>
+          </div>
+
 
         </div>
       </div>
 
     </div>
+  </div>
 
     <div id="footer">
       <div class="inner">
@@ -188,5 +245,104 @@
   <script type="text/javascript" src="/js/waypoints.min.js"></script>
   <script type="text/javascript" src="/js/waypoints-sticky.min.js"></script>
   <script type="text/javascript" src="/js/navbar.js"></script>
+    <script src="{{base}}js/stellar.js"></script>
+    <script>
+      (function(){
+        var ua = navigator.userAgent,
+          isMobileWebkit = /WebKit/.test(ua) && /Mobile/.test(ua);
+
+        if (isMobileWebkit) {
+          $('html').addClass('mobile');
+        }
+
+        $(function(){
+          var iScrollInstance;
+
+          if (isMobileWebkit) {
+            iScrollInstance = new iScroll('wrapper', {
+              onScrollStart: function() {
+                if( !$("#booknow").hasClass('short') )
+                {
+                  hideBookMenu();
+                }
+              }
+            });
+
+            $('#scroller').stellar({
+              scrollProperty: 'transform',
+              positionProperty: 'transform',
+              horizontalScrolling: false,
+              verticalOffset: 0,
+              parallaxBackgrounds: true,
+              parallaxElements: true,
+              hideDistantElements: false,
+            });
+            $("#page07").remove();
+
+          } else {
+            $.stellar({
+              scrollProperty: 'scroll',
+              positionPropert: 'position',
+              horizontalScrolling: false,
+              verticalOffset: 0,
+              parallaxBackgrounds: true,
+              parallaxElements: true,
+              hideDistantElements: true,
+            });
+          }
+
+          //Prevent text selection
+          $(document).mousedown(function(e){
+            e.preventDefault();
+          });
+        });
+
+        function showBookMenu(){
+          $("#booknow").removeClass('short').animate({width:'424px'}, 200);
+          $("#nowBtn").hide();
+          $("#bookmenu").fadeIn('fast');
+        }
+
+        function hideBookMenu(){
+          $("#booknow").addClass('short').animate({width:'100px'}, 200);
+          $("#bookmenu").hide();
+          $("#nowBtn").fadeIn();
+        }
+
+        $("#booknow").bind('click', function(){
+          if( $(this).hasClass('short') )
+          {
+            showBookMenu();
+          }
+        });
+
+        $("#booknow").hover( function(){
+          if( $("#booknow").hasClass('short') )
+          {
+            showBookMenu();
+          }
+        });
+
+        $('#body').waypoint(function(direction) {
+          if( !$("#booknow").hasClass('short') )
+          {
+            hideBookMenu();
+          } else {
+            showBookMenu();
+          }
+        });
+
+        function alignBookMenu(){
+          var rightSpace = ($(window).width() - $("#body").width()-140)/2;
+          $("#booknow").css('right', rightSpace);
+        }
+        $(window).resize(function() {
+          alignBookMenu();
+        });
+        alignBookMenu();
+
+      })();
+
+    </script>
   </body>
 </html>

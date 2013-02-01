@@ -1,10 +1,12 @@
 .carousel {
   margin: 0 -110px;
   overflow: hidden;
+  position: relative;
   .inner {
     padding: 0 !important;
     white-space: nowrap;
     width: 7200px;
+    -webkit-transition: margin 1s ease;
   }
   .slide {
     background-color: transparent;
@@ -16,5 +18,32 @@
   }
   img {
     display: block;
+  }
+  .indicator {
+    bottom: 30px;
+    left: 50%;
+    margin-left: -50px;
+    position: absolute;
+    z-index: 3;
+    li {
+      display: inline-block;
+      margin-left: 5px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    a {
+      border: 1px solid #fff;
+      border-radius: 8px;
+      display: block;
+      height: 8px;
+      overflow: hidden;
+      text-indent: -9999px;
+      width: 8px;
+      -webkit-box-sixing: border-box;
+      &.on {
+        background-color: #fff;
+      }
+    }
   }
 }

@@ -1309,11 +1309,13 @@ table {
 .carousel {
   margin: 0 -110px;
   overflow: hidden;
+  position: relative;
 }
 .carousel .inner {
   padding: 0 !important;
   white-space: nowrap;
   width: 7200px;
+  -webkit-transition: margin 1s ease;
 }
 .carousel .slide {
   background-color: transparent;
@@ -1325,6 +1327,33 @@ table {
 }
 .carousel img {
   display: block;
+}
+.carousel .indicator {
+  bottom: 30px;
+  left: 50%;
+  margin-left: -50px;
+  position: absolute;
+  z-index: 3;
+}
+.carousel .indicator li {
+  display: inline-block;
+  margin-left: 5px;
+}
+.carousel .indicator li:first-child {
+  margin-left: 0;
+}
+.carousel .indicator a {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 8px;
+  -webkit-box-sixing: border-box;
+}
+.carousel .indicator a.on {
+  background-color: #fff;
 }
 .body-navbar {
   background: #26282c;
@@ -1384,6 +1413,9 @@ table {
 .body-navbar.booking li:first-child a {
   padding-left: 0;
 }
+.body-navbar.booking a {
+  color: #ccc;
+}
 .body-navbar.booking li:not(:last-child) a:after {
   background: transparent url(/images/icon.arrow.large.gray.png) no-repeat 0 0;
   background-size: 100%;
@@ -1392,6 +1424,7 @@ table {
   height: 11px;
   left: 18px;
   position: relative;
+  opacity: 0.5;
   overflow: hidden;
   text-indent: -9999px;
   top: -2px;
@@ -1402,4 +1435,84 @@ table {
   background: transparent;
   color: #26282c;
   font-weight: 300;
+}
+#room #booknow {
+  top: 420px;
+}
+#room #booknow.bottom {
+  bottom: -1px;
+  position: absolute;
+  top: auto;
+}
+#booknow {
+  background: #8453aa;
+  height: 115px;
+  position: fixed;
+  padding: 25px 30px 28px;
+  right: 0px;
+  top: 350px;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+}
+#booknow.bottom {
+  bottom: -1px;
+  position: absolute;
+  top: auto;
+}
+#booknow.short {
+  padding: 55px 0 0;
+}
+#booknow #bookmenu {
+  white-space: nowrap;
+  width: 364px;
+}
+#booknow #bookmenu p {
+  color: #fff;
+  font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif;
+  margin-bottom: 10px;
+}
+#booknow #bookmenu .bookbtn {
+  width: 120px;
+  height: 36px;
+  background: #fff;
+  border-radius: 2px;
+  float: left;
+  margin-right: 12px;
+}
+#booknow #bookmenu .bookbtn p {
+  color: #262626;
+  font: bold 12px/1 "helvetica-neue", sans-serif;
+  line-height: 40px;
+  margin-left: 12px;
+  position: relative;
+}
+#booknow #bookmenu .bookbtn p span {
+  background: #482167 url(/images/icon.calendar.mondrian.png) 50% 50% no-repeat;
+  border-radius: 0 2px 2px 0;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 27px;
+}
+#booknow #bookmenu .bookbtn.black {
+  background: #262626;
+  margin-right: 0;
+  width: 100px;
+}
+#booknow #bookmenu .bookbtn.black p {
+  color: #fff;
+  font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif;
+  line-height: 40px;
+  text-align: center;
+  margin-left: -2px;
+  margin-top: 1px;
+  background: none;
+}
+#booknow #nowBtn {
+  display: none;
+  color: #fff;
+  font: italic 15px/1 "helvetica-neue-condensed", sans-serif;
+  text-align: center;
+  text-indent: -5px;
 }

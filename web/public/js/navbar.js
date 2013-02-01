@@ -13,7 +13,9 @@ $(document).ready(
         $('#booknow').toggleClass('bottom');
       }, {
         offset: function() {
-          return $('#booknow').position().top + $('#booknow').height();
+          var position = $('#booknow').position() || {};
+          var top = position.top;
+          return top + $('#booknow').outerHeight();
         }
       })
       .waypoint(function(direction) {
@@ -44,6 +46,22 @@ $(document).ready(
         var $target = $($(this).attr('href'));
         $(this).toggleClass('open');
         $target.toggleClass('in');
+      }
+    );
+
+    $('.carousel .indicator a').click(
+      function(event) {
+        event.preventDefault();
+        $('.carousel .indicator a.on').removeClass('on');
+        $(this).toggleClass('on');
+        var slide = parseInt($(this).data('slide'));
+        $('.carousel .inner').css('margin-left',-((slide-1)*1200));
+      }
+    );
+
+    $('a[href="#"]').click(
+      function(event) {
+        event.preventDefault();
       }
     );
   }
