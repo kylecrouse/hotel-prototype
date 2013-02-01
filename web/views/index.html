@@ -281,16 +281,16 @@
         });
 
         $('#body').waypoint(function(direction) {
-          console.log(direction);
           if( !$("#booknow").hasClass('short') )
           {
             hideBookMenu();
+          } else {
+            showBookMenu();
           }
         });
 
         function alignBookMenu(){
           var rightSpace = ($(window).width() - $("#body").width())/2;
-          console.log(rightSpace);
           $("#booknow").css('right', rightSpace);
         }
         $(window).resize(function() {
