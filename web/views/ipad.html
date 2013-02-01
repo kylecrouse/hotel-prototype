@@ -95,7 +95,7 @@
                 <div class="page-titles center">
                   <p class="first-title">fashion week package</p>
                   <p class="second-title">The new black</p>
-                  <p class="description" style="width:500px;">It goes with everything. This special offer includes an appointment with a stylist, shopping discounts, and transportation to all the action. Our exclusive partnership with Scoop NYC has all you need to survive #NYFW in style.</p>
+                  <p class="description">It goes with everything. This special offer includes an appointment with a stylist, shopping discounts, and transportation to all the action. Our exclusive partnership with Scoop NYC has all you need to survive #NYFW in style.</p>
                   <a class="click-title">book now</a>
                 </div>
               </div>
@@ -269,24 +269,14 @@
           }
         });
 
-        $('.page, #footer').waypoint(function(direction) {
-          console.log(direction);
-          if( !$("#ipad_booknow").hasClass('short') )
-          {
-            hideBookMenu();
-          }
-        });
-
-        function alignBookMenu(){
-          var rightSpace = ($(window).width() - $("#body").width())/2;
-          console.log(rightSpace);
-          $("#ipad_booknow").css('right', rightSpace);
-        }
-        $(window).resize(function() {
-          alignBookMenu();
-        });
-        // alignBookMenu();
-
+        setTimeout(function() {
+          $('#footer').waypoint(function(direction) {
+            if( !$("#ipad_booknow").hasClass('short') )
+            {
+              hideBookMenu();
+            }
+          });
+        }, 2000);
       })();
 
     </script>
