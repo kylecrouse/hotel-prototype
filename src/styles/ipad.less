@@ -1,0 +1,265 @@
+#footer {
+  margin-top: 0px;
+}
+
+#body
+{
+  width: 1024px;
+  padding: 0;
+  .inner 
+  {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    section {
+      position: relative;
+      top: 0px;
+      width: 100%;
+      height: 6182px;
+      margin: 0;
+      .page {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .page-bg {
+          position: absolute;
+          &.house {
+            width: 100%;
+            height: 860px;
+            background: #26282c;
+          }
+        }
+        .page-grid-info {
+          color: #eee;
+          margin-top: 70px;
+          text-align: center;
+          font:normal 15px/1 "helvetica-neue", sans-serif;
+          text-transform: uppercase;
+          margin-bottom: 15px;
+        }
+        .page-grid-title {
+          color: #fff;
+          text-align: center;
+          font:italic normal 40px/1 "helvetica-neue-condensed", sans-serif;
+          text-transform: uppercase;
+        }
+        .page-grid-click {
+          clear: both;
+          color: #eee;
+          text-transform: uppercase;
+          text-decoration: underline;
+          text-align: center;
+          font:lighter 14px/1;
+          font-style: italic;
+          padding-top: 20px;
+        }
+        .page-grid {
+          color: #fff;
+          width: 840px;
+          margin: 30px auto;
+          .page-grid-item {
+            float: left;
+            margin-bottom: 50px;
+            .grid-item-info {
+              text-transform: uppercase;
+              font-size: 16px;
+              font-style: italic;
+              margin-bottom: 3px;
+            }
+            .grid-item-image {
+            }
+            .grid-item-name {
+              text-transform: uppercase;
+              line-height: 18px;
+              margin-bottom: 3px;
+              font-size: 13px;
+              font-style: italic;
+            }
+            .grid-item-description {
+              font-size: 10px;
+              line-height: 12px;
+              width: 240px;
+              color: #888;
+              span {
+                color: #eee;
+                text-decoration: underline;
+                text-transform: uppercase;
+                font-style: italic;
+              }
+            }
+          }
+        }
+        .page-titles {
+          position: absolute;
+          top: 200px;
+          left: 150px;
+          width: 450px;
+          &.center{
+            text-align: center;
+            left: 375px;
+          }
+          .first-title {
+            color: #fff;
+            font:normal 16px/1 "helvetica-neue", sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+          }
+          .second-title {
+            color: #fff;
+            font:italic normal 50px/1 "helvetica-neue-condensed", sans-serif;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            margin-left: -5px;
+          }
+          .description {
+            color: #fff;
+            font-size: 14px;
+            font-style: italic;
+            line-height: 20px;
+            margin-bottom: 10px;
+          }
+          .click-title {
+            color: #fff;
+            font-size: 14px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-style: italic;
+            font-weight: normal;
+          }
+        }
+      }
+    } 
+  }
+}
+
+*{
+  -webkit-overflow-scrolling:touch;
+}
+
+#page01 {
+  height: 880px;
+}
+#page02 {
+  height: 860px;
+}
+#page03 {
+  height: 840px;
+}
+#page04 {
+  height: 1020px;
+}
+#page05 {
+  height: 940px;
+}
+#page06 {
+  height: 968px;
+  #animate-01 {
+    top: 124px;
+    left: 658px;
+  }
+}
+#page07 {
+  height: 675px;
+}
+
+#ipad_booknow {
+  background: #8453aa;
+  height: 90px;
+  position: fixed;
+  top: 300px;
+  right: 0px;
+  width: 400px;
+  padding: 0px;
+
+  #bookmenu {
+    margin: 15px 0 0 20px;
+    p {
+      color: #fff;
+      font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif; 
+      margin-bottom: 5px;
+    }
+    .bookbtn {
+      width: 120px;
+      height: 36px;
+      background: #fff;
+      border-radius: 2px;
+      float: left;
+      margin-right: 12px;
+      p {
+        color: #262626;
+        font:bold 12px/1 "helvetica-neue-condensed", sans-serif; 
+        line-height: 40px;
+        margin-left: 12px;
+        position: relative;
+        span {
+          background: #482167 url(/images/icon.calendar.mondrian.png) 50% 50% no-repeat;
+          border-radius: 0 2px 2px 0;
+          height: 36px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 27px;
+        }
+      }
+      &.black {
+        width: 100px;
+        background: #262626;
+        p {
+          color: #fff;
+          font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif; 
+          line-height: 40px;
+          text-align: center;
+          margin-left: -2px;
+          margin-top: 1px;
+          background: none;
+        }
+      }
+    }
+  }
+
+  #nowBtn {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    color: #fff;
+    font: italic normal 15px/1 "helvetica-neue-condensed", sans-serif; 
+    line-height: 96px;
+    right: 10px;
+  }
+}
+
+.mobile body {
+  overflow: hidden;
+  #body {
+    width: 1024px;
+    .inner {
+      section {
+        height: 5503px;
+        .page {
+          .page-titles {
+            top: 180px;
+            left: 120px;
+            &.center{
+              left: 287px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  #scroller {
+    height: 5628px;
+  }
+  #footer {
+    display: none;
+  }
+}
