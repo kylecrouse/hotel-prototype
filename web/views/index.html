@@ -37,13 +37,13 @@
           </div>
         </div>
 
-    <div id="booknow">
+    <div id="booknow" class="top">
       <p id="nowBtn">&lt; BOOK NOW</p>
       <div id="bookmenu">
         <p>MAKE IT HAPPEN:</p>
         <div class="bookbtn"><p>02/08/2013<span></span></p></div>
         <div class="bookbtn"><p>02/08/2013<span></span></p></div>
-        <div class="bookbtn black"><p>BOOK NOW<p></div>
+        <div class="bookbtn black"><p><a href="/reservation.html">BOOK NOW</a><p></div>
       </div>
     </div>
 
@@ -273,9 +273,17 @@
           {
             showBookMenu();
           }
+        },function(){
+          if( $("#booknow").hasClass('short') )
+          {
+            showBookMenu();
+          } else {
+            if ( !$('#booknow').hasClass('top') ) { hideBookMenu(); }
+          }
         });
 
         $('#body').waypoint(function(direction) {
+          $('#booknow').toggleClass('top');
           if( !$("#booknow").hasClass('short') )
           {
             hideBookMenu();
