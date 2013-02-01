@@ -96,7 +96,7 @@
 }
 #body .inner section .page .page-titles {
   position: absolute;
-  top: 200px;
+  top: 50%;
   left: 150px;
 }
 #body .inner section .page .page-titles.center {
