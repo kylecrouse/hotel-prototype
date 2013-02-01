@@ -37,13 +37,13 @@
           </div>
         </div>
 
-    <div id="booknow">
+    <div id="booknow" class="top">
       <p id="nowBtn">&lt; BOOK NOW</p>
       <div id="bookmenu">
         <p>MAKE IT HAPPEN:</p>
         <div class="bookbtn"><p>02/08/2013<span></span></p></div>
         <div class="bookbtn"><p>02/08/2013<span></span></p></div>
-        <div class="bookbtn black"><p>BOOK NOW<p></div>
+        <div class="bookbtn black"><p><a href="/reservation.html">BOOK NOW</a><p></div>
       </div>
     </div>
 
@@ -52,7 +52,7 @@
             <section>
               <div class="page" id="page01" data-page="1" style="background-image:url({{base}}images/homepage01_bg.jpg);" data-stellar-background-ratio="0.5">
                 <!-- <img src="{{base}}images/homepage01_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
-                <div class="page-titles">
+                <div class="page-titles" style="top:215px;">
                   <p class="first-title">MONDRIAN SoHo</p>
                   <p class="second-title">The scene<br>comes together</p>
                 </div>
@@ -104,32 +104,32 @@
               </div>
               <div class="page" id="page03" data-page="3" style="background-image:url({{base}}images/homepage03_bg.jpg);" data-stellar-background-ratio="0.5">
                 <!-- <img src="{{base}}images/homepage03_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
-                <div class="page-titles center">
+                <div class="page-titles center" style="left: auto; margin: -102px auto 0; position: relative;">
                   <p class="first-title">fashion week package</p>
                   <p class="second-title">The new black</p>
-                  <p class="description" style="width:500px;">It goes with everything. This special offer includes an appointment with a stylist, shopping discounts, and transportation to all the action. Our exclusive partnership with Scoop NYC has all you need to survive #NYFW in style.</p>
+                  <p class="description" style="width:500px;margin:0 auto 10px;">It goes with everything. This special offer includes an appointment with a stylist, shopping discounts, and transportation to all the action. Our exclusive partnership with Scoop NYC has all you need to survive #NYFW in style.</p>
                   <a class="click-title">book now</a>
                 </div>
               </div>
               <div class="page" id="page07" data-page="7">
                 <video id="mondrian_video" src="{{base}}videos/mondrian.mov" type="video/mov" width="1200px" height="675px" autoplay loop muted></video>
               </div>
-              <div class="page" id="page04" data-page="4" style="background-image:url({{base}}images/homepage04_bg.jpg); background-position: 0 100px;" data-stellar-background-ratio="0.5">
+              <div class="page" id="page04" data-page="4" style="background-image:url({{base}}images/homepage04_bg.jpg); background-position: 0 -300px;" data-stellar-background-ratio="0.5">
                 <!-- <img src="{{base}}images/homepage04_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
-                <div class="page-titles center">
-                  <p class="first-title">mister h news</p>
+                <div class="page-titles center" style="left: auto; margin: -92px auto 0; position: relative;">
+                  <p class="first-title">nightlife</p>
                   <p class="second-title">Exposure. hidden.</p>
-                  <p class="description">Step out while staying in. Our very own <br>Mister H will be pouring the drinks. </p>
+                  <p class="description">Step out while staying in. Our very own Mister H will be pouring the drinks<br>as we introduce Rumours, a new party to downtown.</p>
                   <a class="click-title">reveal more</a>
                 </div>
               </div>
-              <div class="page" id="page05" data-page="5" style="background-image:url({{base}}images/homepage05_bg.jpg); background-position: 0 -150px;" data-stellar-background-ratio="0.5">
+              <div class="page" id="page05" data-page="5" style="background-image:url({{base}}images/homepage05_bg.jpg); background-position: 0 -250px;" data-stellar-background-ratio="0.5">
                 <!-- <img src="{{base}}images/homepage05_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
               </div>
               <div class="page" id="page06" data-page="6" style="background-image:url({{base}}images/homepage06_bg.jpg);" data-stellar-background-ratio="0.5">
-                <img src="{{base}}images/tower.gif" class="page-bg" data-stellar-ratio="0.5" style="position: absolute; top: 74px; left: 656px; opacity: 0.6; width: 184px;">
+                <img src="{{base}}images/tower.gif" class="page-bg" data-stellar-ratio="0.5" style="position: absolute; top: 124px; left: 656px; opacity: 0.6; width: 184px;">
                 <!-- <img src="{{base}}images/homepage06_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
-                <div class="page-titles center" style="left: auto; margin: 0 auto; position: relative;">
+                <div class="page-titles center" style="left: auto; margin: -92px auto 0; position: relative;">
                   <p class="first-title">our rooms</p>
                   <p class="second-title">feel the city</p>
                   <p class="description" style="width:400px; margin: 0 auto 10px;">Floor-to-ceiling windows reveal unforgettable views of downtown from the heart of Soho. Take it all in.</p>
@@ -273,9 +273,17 @@
           {
             showBookMenu();
           }
+        },function(){
+          if( $("#booknow").hasClass('short') )
+          {
+            showBookMenu();
+          } else {
+            if ( !$('#booknow').hasClass('top') ) { hideBookMenu(); }
+          }
         });
 
         $('#body').waypoint(function(direction) {
+          $('#booknow').toggleClass('top');
           if( !$("#booknow").hasClass('short') )
           {
             hideBookMenu();

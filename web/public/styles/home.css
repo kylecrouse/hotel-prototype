@@ -23,8 +23,7 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 0;
-  /*background-attachment: fixed;*/
-
+  background-attachment: fixed;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -97,7 +96,7 @@
 }
 #body .inner section .page .page-titles {
   position: absolute;
-  top: 200px;
+  top: 50%;
   left: 150px;
 }
 #body .inner section .page .page-titles.center {

@@ -34,13 +34,13 @@
         </div>
       </div>
 
-      <div id="booknow">
+      <div id="booknow" class="top">
         <p id="nowBtn"><span>&lt;</span> BOOK NOW</p>
         <div id="bookmenu">
           <p>MAKE IT HAPPEN:</p>
           <div class="bookbtn"><p>02/08/2013<span></span></p></div>
           <div class="bookbtn"><p>02/08/2013<span></span></p></div>
-          <div class="bookbtn black"><p>BOOK NOW<p></div>
+          <div class="bookbtn black"><p><a href="/reservation.html">BOOK NOW</a><p></div>
         </div>
       </div>
 
@@ -58,7 +58,7 @@
             </ul>
             <div class="inner">
               <div class="slide" style="background-image: url(/images/1.jpg);">
-                <div style="color: #fff; padding-top: 290px; text-align: center;">
+                <div style="color: #fff; padding-top: 290px; margin-left: 110px;">
                   <div style="font: normal normal 20px/50px helvetica-neue,sans-serif; text-transform: uppercase;">Our Rooms</div>
                   <div style="font: italic normal 100px/90px helvetica-neue-condensed, sans-serif; text-indent: -15px; margin-bottom: 10px; text-transform: uppercase;">Deluxe</div>
                 </div>
@@ -321,9 +321,17 @@
           {
             showBookMenu();
           }
+        },function(){
+          if( $("#booknow").hasClass('short') )
+          {
+            showBookMenu();
+          } else {
+            if ( !$('#booknow').hasClass('top') ) { hideBookMenu(); }
+          }
         });
 
         $('#body').waypoint(function(direction) {
+          $('#booknow').toggleClass('top');
           if( !$("#booknow").hasClass('short') )
           {
             hideBookMenu();
