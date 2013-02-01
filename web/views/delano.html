@@ -15,12 +15,12 @@
         <div id="header">
           <div class="navbar">
             <div class="inner">
-              <h1 class="brand"><a href="/">Delano <span>South Beach</span></a></h1>
+              <h1 class="brand"><a href="#">Delano <span>South Beach</span></a></h1>
              <nav class="nav">
                 <ul>
-                  <li><a href="/room.html">Explore</a></li>
+                  <li><a href="#">Explore</a></li>
                   <li><a href="#">Location</a></li>
-                  <li><a href="/reservation.html">Reservations</a></li>
+                  <li><a href="#">Reservations</a></li>
                   <li><a href="#">Events</a></li>
                   <li><a href="#">Back of House</a></li>
                   <li><a href="#">Bang</a></li>
@@ -37,7 +37,7 @@
           </div>
         </div>
 
-    <div id="booknow">
+    <div id="booknow" class="top">
       <p id="nowBtn">&lt; BOOK NOW</p>
       <div id="bookmenu">
         <p>Dive In:</p>
@@ -274,9 +274,17 @@
           {
             showBookMenu();
           }
+        },function(){
+          if( $("#booknow").hasClass('short') )
+          {
+            showBookMenu();
+          } else {
+            if ( !$('#booknow').hasClass('top') ) { hideBookMenu(); }
+          }
         });
 
         $('#body').waypoint(function(direction) {
+          $('#booknow').toggleClass('top');
           if( !$("#booknow").hasClass('short') )
           {
             hideBookMenu();
