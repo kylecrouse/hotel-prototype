@@ -1,0 +1,232 @@
+#footer {
+  margin-top: 0px;
+}
+#body {
+  width: 1200px;
+  padding: 0;
+}
+#body .inner {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#body .inner section {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  margin: 0;
+}
+#body .inner section .page {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-attachment: fixed;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+#body .inner section .page .page-bg {
+  position: absolute;
+}
+#body .inner section .page .page-bg.house {
+  width: 100%;
+  height: 860px;
+  background: #fff;
+}
+#body .inner section .page .page-grid-info {
+  color: #26282c;
+  margin-top: 80px;
+  text-align: center;
+  font: normal 15px/1 "helvetica-neue", sans-serif;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+#body .inner section .page .page-grid-title {
+  color: #26282c;
+  text-align: center;
+  font: normal normal 36px/1 "helvetica-neue", sans-serif;
+  text-transform: uppercase;
+}
+#body .inner section .page .page-grid-click {
+  clear: both;
+  color: #26282c;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: center;
+  font-size: 14px;
+  font-style: italic;
+}
+#body .inner section .page .page-grid {
+  color: #26282c;
+  width: 981px;
+  margin: 30px auto;
+}
+#body .inner section .page .page-grid .page-grid-item {
+  float: left;
+  margin-bottom: 50px;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-info {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 3px;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-name {
+  line-height: 20px;
+  margin-bottom: 3px;
+  font-size: 14px;
+  font-style: italic;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-description {
+  font-size: 11px;
+  line-height: 16px;
+  width: 240px;
+  color: #888;
+}
+#body .inner section .page .page-grid .page-grid-item .grid-item-description span {
+  color: #26282c;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-style: italic;
+}
+#body .inner section .page .page-titles {
+  position: absolute;
+  top: 200px;
+  left: 150px;
+  width: 450px;
+}
+#body .inner section .page .page-titles.center {
+  text-align: center;
+  left: 375px;
+}
+#body .inner section .page .page-titles .first-title {
+  color: #fff;
+  font: normal 14px/1 "helvetica-neue", sans-serif;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+#body .inner section .page .page-titles .second-title {
+  color: #fff;
+  font: normal normal 50px/1 "helvetica-neue", sans-serif;
+  text-transform: uppercase;
+  line-height: 52px;
+}
+#body .inner section .page .page-titles .description {
+  color: #fff;
+  font: lighter 10px/1;
+  font-style: italic;
+  margin: 10px 90px 10px 90px;
+}
+#body .inner section .page .page-titles .click-title {
+  color: #fff;
+  font: 15px/1;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: normal;
+}
+* {
+  -webkit-overflow-scrolling: touch;
+}
+#page01 {
+  height: 880px;
+}
+#page02 {
+  height: 1060px;
+}
+#page03 {
+  height: 840px;
+}
+#page04 {
+  height: 1020px;
+}
+#page05 {
+  height: 940px;
+}
+#page06 {
+  height: 1360px;
+}
+#page07 {
+  height: 675px;
+}
+#booknow {
+  z-index: 1;
+  background: #71cbd3;
+  height: 90px;
+  position: fixed;
+  top: 350px;
+  right: 0px;
+  width: 400px;
+}
+#booknow.bottom {
+  bottom: -1px;
+  position: absolute;
+  top: auto;
+}
+#booknow #bookmenu {
+  margin: 15px 0 0 20px;
+}
+#booknow #bookmenu p {
+  color: #fff;
+  font: normal normal 16px/1 "helvetica-neue", sans-serif;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+#booknow #bookmenu .bookbtn {
+  width: 120px;
+  height: 36px;
+  background: #fff;
+  border-radius: 2px;
+  float: left;
+  margin-right: 12px;
+}
+#booknow #bookmenu .bookbtn p {
+  color: #262626;
+  font: bold 12px/1 "helvetica-neue", sans-serif;
+  line-height: 40px;
+  margin-left: 12px;
+  position: relative;
+}
+#booknow #bookmenu .bookbtn p span {
+  background: #009fb2 url(/images/icon.calendar.delano.png) 50% 50% no-repeat;
+  border-radius: 0 2px 2px 0;
+  height: 36px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 27px;
+}
+#booknow #bookmenu .bookbtn.black {
+  width: 100px;
+  background: #262626;
+}
+#booknow #bookmenu .bookbtn.black p {
+  color: #fff;
+  font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif;
+  line-height: 40px;
+  text-align: center;
+  margin-left: 0;
+  background: none;
+}
+#booknow #nowBtn {
+  display: none;
+  position: absolute;
+  color: #fff;
+  font: italic 15px/1 "helvetica-neue-condensed", sans-serif;
+  line-height: 96px;
+  right: 10px;
+}
+.mobile body {
+  overflow: hidden;
+}
+.mobile body #wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.mobile body #scroller {
+  height: 5400px;
+}

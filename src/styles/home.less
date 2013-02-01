@@ -55,7 +55,7 @@
           text-transform: uppercase;
           text-decoration: underline;
           text-align: center;
-          font:lighter 14px/1;
+          font-size: 14px;
           font-style: italic;
         }
         .page-grid {
@@ -75,14 +75,14 @@
             }
             .grid-item-name {
               text-transform: uppercase;
-              line-height: 16px;
+              line-height: 20px;
               margin-bottom: 3px;
-              font-size: 13px;
+              font-size: 14px;
               font-style: italic;
             }
             .grid-item-description {
-              font-size: 10px;
-              line-height: 12px;
+              font-size: 11px;
+              line-height: 16px;
               width: 240px;
               color: #888;
               span {
@@ -179,7 +179,7 @@
     margin: 15px 0 0 20px;
     p {
       color: #fff;
-      font: italic normal 13px/1 "helvetica-neue-condensed", sans-serif; 
+      font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif; 
       line-height: 20px;
     }
     .bookbtn {
@@ -191,10 +191,19 @@
       margin-right: 12px;
       p {
         color: #262626;
-        font:bold 14px/1 "helvetica-neue-condensed", sans-serif; 
-        line-height: 42px;
-        margin-left: 8px;
-        background: url(/images/bookmenu_date.png) 80px 10px no-repeat;
+        font:bold 12px/1 "helvetica-neue", sans-serif; 
+        line-height: 40px;
+        margin-left: 12px;
+        position: relative;
+        span {
+          background: #482167 url(/images/icon.calendar.mondrian.png) 50% 50% no-repeat;
+          border-radius: 0 2px 2px 0;
+          height: 36px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 27px;
+        }
       }
       &.black {
         width: 100px;
