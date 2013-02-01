@@ -209,16 +209,17 @@
   font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif;
   line-height: 40px;
   text-align: center;
-  margin-left: 0;
+  margin-left: -2px;
+  margin-top: 1px;
   background: none;
 }
 #booknow #nowBtn {
   display: none;
-  position: absolute;
   color: #fff;
   font: italic 15px/1 "helvetica-neue-condensed", sans-serif;
   line-height: 96px;
-  right: 10px;
+  text-align: center;
+  text-indent: -5px;
 }
 .mobile body {
   overflow: hidden;
