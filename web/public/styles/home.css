@@ -156,26 +156,31 @@
   height: 675px;
 }
 #booknow {
-  z-index: 1;
   background: #8453aa;
-  height: 90px;
+  height: 115px;
   position: fixed;
-  top: 350px;
+  padding: 25px 30px 28px;
   right: 0px;
-  width: 400px;
+  top: 350px;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
 }
 #booknow.bottom {
   bottom: -1px;
   position: absolute;
   top: auto;
 }
+#booknow.short {
+  padding: 55px 0 0;
+}
 #booknow #bookmenu {
-  margin: 15px 0 0 20px;
+  white-space: nowrap;
+  width: 364px;
 }
 #booknow #bookmenu p {
   color: #fff;
   font: italic normal 16px/1 "helvetica-neue-condensed", sans-serif;
-  line-height: 20px;
+  margin-bottom: 10px;
 }
 #booknow #bookmenu .bookbtn {
   width: 120px;
@@ -202,8 +207,9 @@
   width: 27px;
 }
 #booknow #bookmenu .bookbtn.black {
-  width: 100px;
   background: #262626;
+  margin-right: 0;
+  width: 100px;
 }
 #booknow #bookmenu .bookbtn.black p {
   color: #fff;
@@ -218,7 +224,6 @@
   display: none;
   color: #fff;
   font: italic 15px/1 "helvetica-neue-condensed", sans-serif;
-  line-height: 96px;
   text-align: center;
   text-indent: -5px;
 }

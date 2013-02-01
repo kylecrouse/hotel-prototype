@@ -249,18 +249,13 @@
         });
 
         function showBookMenu(){
-          $("#booknow").removeClass('short').animate({
-            width: '400px',
-          }, 200);
-          $("#nowBtn").fadeOut('fast', function (){
-            $("#bookmenu").fadeIn('fast');
-          });
+          $("#booknow").removeClass('short').animate({width:'424px'},200);
+          $("#nowBtn").hide();
+          $("#bookmenu").fadeIn('fast');
         }
 
         function hideBookMenu(){
-          $("#booknow").addClass('short').animate({
-            width: '100px',
-          }, 200);
+          $("#booknow").addClass('short').animate({width:'100px'},200);
           $("#bookmenu").hide();
           $("#nowBtn").fadeIn();
         }
