@@ -20,6 +20,10 @@
       margin: 0;
       // background: green;
       .page {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: 0;
+        background-attachment: fixed;
         width: 100%;
         overflow: hidden;
         position: relative;
@@ -165,6 +169,11 @@
   top: 350px;
   right: 0px;
   width: 400px;
+  &.bottom {
+    bottom: -1px;
+    position: absolute;
+    top: auto;
+  }
 
   #bookmenu {
     margin: 15px 0 0 20px;

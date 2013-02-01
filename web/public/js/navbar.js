@@ -5,7 +5,16 @@ $(document).ready(
       .waypoint(function(direction) {
         $('#header .navbar').toggleClass('bottom');
       }, {
-        offset: 120
+        offset: function() {
+          return ($('#header .navbar').outerHeight()+parseInt($('#footer').css('margin-top')));
+        }
+      })
+      .waypoint(function(direction) {
+        $('#booknow').toggleClass('bottom');
+      }, {
+        offset: function() {
+          return $('#booknow').position().top + $('#booknow').height();
+        }
       })
       .waypoint(function(direction) {
         $('.body-navbar').toggleClass('bottom');

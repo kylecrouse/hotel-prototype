@@ -19,6 +19,10 @@
   margin: 0;
 }
 #body .inner section .page {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-attachment: fixed;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -156,6 +160,11 @@
   top: 350px;
   right: 0px;
   width: 400px;
+}
+#booknow.bottom {
+  bottom: -1px;
+  position: absolute;
+  top: auto;
 }
 #booknow #bookmenu {
   margin: 15px 0 0 20px;

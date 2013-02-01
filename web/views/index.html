@@ -8,8 +8,10 @@
   </head>
   <body>
 
+  <div id="scroller">
+
     <div id="wrapper">
-      <div id="scroller">
+
         <div id="header">
           <div class="navbar">
             <div class="inner">
@@ -35,11 +37,21 @@
           </div>
         </div>
 
+    <div id="booknow">
+      <p id="nowBtn">&lt; BOOK NOW</p>
+      <div id="bookmenu">
+        <p>MAKE IT HAPPEN:</p>
+        <div class="bookbtn"><p>FEB 8, 2013</p></div>
+        <div class="bookbtn"><p>FEB 8, 2013</p></div>
+        <div class="bookbtn black"><p>BOOK NOW<p></div>
+      </div>
+    </div>
+
         <div id="body">
           <div class="inner">
             <section>
-              <div class="page" id="page01" data-page="1" >
-                <img src="{{base}}images/homepage01_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
+              <div class="page" id="page01" data-page="1" style="background-image:url({{base}}images/homepage01_bg.jpg);" data-stellar-background-ratio="0.5">
+                <!-- <img src="{{base}}images/homepage01_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
                 <div class="page-titles">
                   <p class="first-title">MONDRIAN SoHo</p>
                   <p class="second-title">The scene comes together</p>
@@ -90,8 +102,8 @@
                   <p class="page-grid-click">More from back of house</p>
                 </div>
               </div>
-              <div class="page" id="page03" data-page="3">
-                <img src="{{base}}images/homepage03_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
+              <div class="page" id="page03" data-page="3" style="background-image:url({{base}}images/homepage03_bg.jpg);" data-stellar-background-ratio="0.5">
+                <!-- <img src="{{base}}images/homepage03_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
                 <div class="page-titles center">
                   <p class="first-title">fashion week package</p>
                   <p class="second-title">The new black</p>
@@ -99,8 +111,8 @@
                   <a class="click-title">book now</a>
                 </div>
               </div>
-              <div class="page" id="page04" data-page="4">
-                <img src="{{base}}images/homepage04_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
+              <div class="page" id="page04" data-page="4" style="background-image:url({{base}}images/homepage04_bg.jpg); background-position: 0 -300px;" data-stellar-background-ratio="0.5">
+                <!-- <img src="{{base}}images/homepage04_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
                 <div class="page-titles center">
                   <p class="first-title">mister h news</p>
                   <p class="second-title">Exposure. hidden.</p>
@@ -111,11 +123,11 @@
               <div class="page" id="page07" data-page="7">
                 <video id="mondrian_video" src="{{base}}videos/mondrian.mov" type="video/mov" width="1200px" height="675px" autoplay loop muted></video>
               </div>
-              <div class="page" id="page05" data-page="5">
-                <img src="{{base}}images/homepage05_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
+              <div class="page" id="page05" data-page="5" style="background-image:url({{base}}images/homepage05_bg.jpg); background-position: 0 -150px;" data-stellar-background-ratio="0.5">
+                <!-- <img src="{{base}}images/homepage05_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
               </div>
-              <div class="page" id="page06" data-page="6">
-                <img src="{{base}}images/homepage06_bg.jpg" class="page-bg" data-stellar-ratio="0.5">
+              <div class="page" id="page06" data-page="6" style="background-image:url({{base}}images/homepage06_bg.jpg);" data-stellar-background-ratio="0.5">
+                <!-- <img src="{{base}}images/homepage06_bg.jpg" class="page-bg" data-stellar-ratio="0.5"> -->
                 <div class="page-titles center">
                   <p class="first-title">our rooms</p>
                   <p class="second-title">feel the city</p>
@@ -127,7 +139,9 @@
           </div>
         </div>
 
-        <div id="footer">
+       </div>
+
+       <div id="footer">
           <div class="inner">
 
             <div class="property">
@@ -175,21 +189,13 @@
             </div>
           </div>
         </div>
-      </div>
     </div>
 
-    <div id="booknow">
-      <p id="nowBtn">&lt; BOOK NOW</p>
-      <div id="bookmenu">
-        <p>MAKE IT HAPPEN:</p>
-        <div class="bookbtn"><p>FEB 8, 2013</p></div>
-        <div class="bookbtn"><p>FEB 8, 2013</p></div>
-        <div class="bookbtn black"><p>BOOK NOW<p></div>
-      </div>
-    </div>
     <script src="{{base}}js/jquery.min.js"></script>
     <script src="{{base}}js/iscroll.js"></script>
     <script src="{{base}}js/waypoints.min.js"></script>
+    <script type="text/javascript" src="/js/waypoints-sticky.min.js"></script>
+    <script type="text/javascript" src="/js/navbar.js"></script>
     <script src="{{base}}js/stellar.js"></script>
     <script>
       (function(){
@@ -218,7 +224,7 @@
               positionProperty: 'transform',
               horizontalScrolling: false,
               verticalOffset: 0,
-              parallaxBackgrounds: false,
+              parallaxBackgrounds: true,
               parallaxElements: true,
               hideDistantElements: false,
             });
@@ -226,11 +232,13 @@
 
           } else {
             $.stellar({
+              // scrollProperty: 'transform',
+              positionPropert: 'position',
               horizontalScrolling: false,
               verticalOffset: 0,
-              parallaxBackgrounds: false,
+              parallaxBackgrounds: true,
               parallaxElements: true,
-              hideDistantElements: false,
+              hideDistantElements: true,
             });
           }
 
