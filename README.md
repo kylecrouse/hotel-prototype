@@ -1,4 +1,2 @@
-morganshotelgroup
+hotel prototype
 =================
-
-MHG Spec
